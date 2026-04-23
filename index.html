@@ -3,66 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CarbonCode — Independent iOS Studio</title>
-    <meta name="description" content="CarbonCode is an independent iOS studio by Tomas Ramirez. We build focused apps that respect your time and your data.">
-    <meta name="theme-color" content="#08090b">
+    <title>CarbonCode — Mobile Studio</title>
+    <meta name="description" content="CarbonCode is a one-person mobile studio building focused, well-crafted apps — starting on iPhone and Apple Watch.">
+    <meta name="theme-color" content="#0A0A0A">
     <meta property="og:title" content="CarbonCode">
-    <meta property="og:description" content="An independent iOS studio by Tomas Ramirez.">
+    <meta property="og:description" content="Mobile apps that earn a spot on your home screen.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://carboncode.app">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 <body>
-    <nav class="top">
-        <a class="brand" href="index.html">Carbon<span>Code</span></a>
+    <nav class="top" style="justify-content: flex-end; padding-top: 16px;">
         <div class="nav-links">
-            <a href="formulapulse/index.html">FormulaPulse</a>
-            <a href="mailto:tomas@carboncode.app">Contact</a>
+            <a href="/utcal/">UTCal</a>
+            <a href="/formulapulse/">FormulaPulse</a>
+            <a href="/about.html">About</a>
         </div>
     </nav>
 
     <main class="wrap">
-        <section class="hero">
-            <span class="kicker">Independent iOS Studio</span>
-            <h1>Apps that respect your time and your data.</h1>
-            <p class="lede">CarbonCode is a one-person studio building focused, fast, ad-minimal apps for iPhone, iPad, and Apple Watch — by <strong style="color: var(--text-soft);">Tomas Ramirez</strong>.</p>
+        <section class="hero" style="padding-top: 20px;">
+            <svg width="72" height="72" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;margin-bottom:20px;">
+                <polygon points="180,100 140,169.28 60,169.28 20,100 60,30.72 140,30.72"
+                    fill="none" stroke="#E83A0A" stroke-width="5" stroke-linejoin="round"/>
+                <line x1="100" y1="100" x2="180" y2="100" stroke="#783218" stroke-width="2"/>
+                <line x1="100" y1="100" x2="140" y2="169.28" stroke="#783218" stroke-width="2"/>
+                <line x1="100" y1="100" x2="60" y2="169.28" stroke="#783218" stroke-width="2"/>
+                <line x1="100" y1="100" x2="20" y2="100" stroke="#783218" stroke-width="2"/>
+                <line x1="100" y1="100" x2="60" y2="30.72" stroke="#783218" stroke-width="2"/>
+                <line x1="100" y1="100" x2="140" y2="30.72" stroke="#783218" stroke-width="2"/>
+                <circle cx="100" cy="100" r="7" fill="#E83A0A"/>
+            </svg>
+            <span class="wordmark">Carbon<span class="cc-code">Code</span></span>
+            <p class="hero-identity">Indie Studio · Veteran Run</p>
+            <p class="lede">Mobile apps that earn a spot on your home screen.</p>
+            <p style="color:var(--text-muted);font-size:16px;max-width:520px;line-height:1.65;margin:0 0 0;">
+                Built nights and weekends by an Army infantry veteran and NDT inspector —
+                starting on iPhone and Apple Watch, with Android on the roadmap.
+            </p>
             <div class="btn-row">
-                <a class="btn btn-primary" href="formulapulse/index.html">See FormulaPulse →</a>
-                <a class="btn btn-ghost" href="mailto:tomas@carboncode.app">Say hi</a>
+                <a class="btn btn-primary" href="/utcal/">See UTCal →</a>
+                <a class="btn btn-ghost" href="/formulapulse/">FormulaPulse</a>
+                <a class="btn btn-ghost" href="/about.html">About</a>
             </div>
         </section>
 
-        <h2>Shipping now</h2>
+        <h2>Apps</h2>
 
-        <a class="card-link" href="formulapulse/index.html">
+        <a class="card-link" href="/utcal/">
             <div class="card">
-                <h3>FormulaPulse <span class="arrow">→</span></h3>
-                <p style="margin: 0;">The F1 companion app for fans who want the full weekend in one place — live sessions, schedules, standings, news, and more on iOS and Apple Watch.</p>
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+                    <h3 style="margin:0;">UTCal</h3>
+                    <span class="badge-live">Live on App Store</span>
+                </div>
+                <p style="margin:0;">A calibration tool for ultrasonic and PAUT inspectors. Built by a UT tech who got tired of doing the math on a notepad.</p>
+                <p class="spec-line" style="margin-top:14px;">iOS · Apple Watch <span class="arrow">→</span></p>
             </div>
         </a>
 
-        <h2>In the pipeline</h2>
+        <a class="card-link" href="/formulapulse/">
+            <div class="card">
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+                    <h3 style="margin:0;">FormulaPulse</h3>
+                    <span class="badge-soon">Coming Soon</span>
+                </div>
+                <p style="margin:0;">The F1 companion for race weekends. Every session, standing, and story — without the clutter.</p>
+                <p class="spec-line" style="margin-top:14px;">iOS · watchOS <span class="arrow">→</span></p>
+            </div>
+        </a>
 
-        <div class="card">
-            <h3>More apps, same philosophy</h3>
-            <p style="margin: 0;">Small tools that do one thing well, without surveillance or subscription traps. Details when they're ready.</p>
-        </div>
-
-        <h2>Contact</h2>
-        <p>
-            General: <a href="mailto:tomas@carboncode.app">tomas@carboncode.app</a><br>
-            FormulaPulse support: <a href="mailto:support.formulapulse@carboncode.app">support.formulapulse@carboncode.app</a>
-        </p>
+        <h2>The Studio</h2>
+        <p>CarbonCode is a one-person operation. No team, no ad budget, no marketing intern. Every app starts with a real problem worth solving and ships only when it earns its place.</p>
+        <p><a href="/about.html">Read the full story →</a></p>
     </main>
 
     <footer>
         <div class="brand-sm">Carbon<span>Code</span></div>
-        <div style="margin-top: 6px;">© 2026 · Tomas Ramirez · Built in Texas</div>
-        <div style="margin-top: 12px;">
-            <a href="formulapulse/privacy.html">Privacy</a>
-            <a href="formulapulse/terms.html">Terms</a>
-            <a href="formulapulse/support.html">Support</a>
+        <div class="footer-identity">Indie Studio · Veteran Run</div>
+        <div class="footer-links">
+            <a href="https://www.facebook.com/profile.php?id=61564563694055">Facebook</a>
+            <a href="mailto:support@carboncode.app">Contact</a>
+            <a href="/utcal/">UTCal</a>
+            <a href="/formulapulse/">FormulaPulse</a>
+            <a href="/about.html">About</a>
         </div>
+        <div class="footer-copy">© 2026 CarbonCode</div>
     </footer>
 </body>
 </html>
