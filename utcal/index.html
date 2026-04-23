@@ -3,15 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UTCal — CarbonCode</title>
-    <meta name="description" content="UTCal is a calibration tool for ultrasonic and PAUT inspectors. Built by a UT tech who got tired of doing the math on a notepad.">
+    <title>UTCal — NDT Calibration Tool for iOS &amp; Apple Watch</title>
+    <meta name="description" content="UTCal is a UT and PAUT calibration calculator for iOS and Apple Watch. Skip distance, beam path, DAC, D1.1 rating, pipe charts, and more — built by a practicing inspector.">
     <meta name="theme-color" content="#0A0A0A">
     <meta property="og:title" content="UTCal — CarbonCode">
-    <meta property="og:description" content="Calibration tool for UT and PAUT inspectors. Available on iOS and Apple Watch.">
+    <meta property="og:description" content="UT and PAUT calibration calculator for inspectors. Available on iOS and Apple Watch.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://carboncode.app/utcal/">
     <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
     <link rel="stylesheet" href="../assets/style.css?v=4">
+    <style>
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0;
+        }
+        @media (max-width: 540px) {
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+        .feature-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+        }
+        .feature-item h3 {
+            font-size: 15px;
+            margin: 0 0 6px;
+        }
+        .feature-item p {
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            margin: 40px 0 12px;
+        }
+        .pro-label {
+            display: inline-block;
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--orange-bright);
+            background: var(--orange-dim);
+            border: 1px solid var(--orange-border);
+            border-radius: 100px;
+            padding: 2px 7px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
     <nav class="top">
@@ -41,7 +89,7 @@
                 <h1 style="margin:0;">UTCal</h1>
                 <span class="badge-live">Live on App Store</span>
             </div>
-            <p class="lede">A calibration tool for ultrasonic and PAUT inspectors. Built by a UT tech who got tired of doing the math on a notepad.</p>
+            <p class="lede">The calibration calculator built for UT and PAUT inspectors — not for someone who read about UT in a textbook.</p>
             <div class="btn-row">
                 <a class="appstore-badge" href="https://apps.apple.com/us/app/utcal/id6762418371">
                     <svg width="20" height="24" viewBox="0 0 24 29" fill="#fff" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -55,22 +103,71 @@
             </div>
         </section>
 
-        <h2>What it does</h2>
+        <p class="section-label">Free features</p>
 
-        <div class="card">
-            <h3>The math, handled</h3>
-            <p>Thickness, velocity, and wedge delay calculations. Put in your measurements, get your result. No formula lookup, no notepad required.</p>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>Skip Distance &amp; Beam Path</h3>
+                <p>Enter angle, thickness, and velocity — get surface distance, leg count, and beam path. The core of every PAUT setup.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Snell's Law</h3>
+                <p>Calculate refracted angle from incident angle and material velocities. Useful for wedge selection and mode verification.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Pipe Reference Chart</h3>
+                <p>Lookup OD, wall thickness, and schedule for standard pipe sizes. Quick reference without digging through a handbook.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Code Library (Basic)</h3>
+                <p>Reference acceptance criteria for common codes. Full code library unlocks with Pro.</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Built for the field</h3>
-            <p>Works offline, no account required. Your calibration data stays on your device — never on a server you don't control.</p>
+        <p class="section-label">Pro features <span class="pro-label">One-time purchase</span></p>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>Beam Path Viewer</h3>
+                <p>Interactive beam path diagram. Slide the probe position and watch the geometry update in real time.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Weld Overlay &amp; Index Offset</h3>
+                <p>Weld geometry visualization with index offset calculator — so you're scanning the right location, not guessing.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Near Field, Dead Zone &amp; More</h3>
+                <p>Near field distance, dead zone, transfer correction, and beam spread — the formulas you need between jobs.</p>
+            </div>
+            <div class="feature-item">
+                <h3>AWS D1.1 Indication Rating</h3>
+                <p>Full structural weld evaluation per AWS D1.1. Enter your dB readings and sound path, get the indication rating and accept/reject verdict.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Pipe Chart Pro</h3>
+                <p>Scan length calculation, favorites, and one-tap scan setup directly from pipe data.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Full Code Library</h3>
+                <p>Acceptance criteria for ASME, API 650/653, B31.1, B31.3, and AWS D1.1 — plus technique references.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Weld Builder</h3>
+                <p>Save complete job setups — material, angle, frequency, wedge — and recall them on the next job.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Fracture Mechanics</h3>
+                <p>Critical flaw size and ASME Section VIII flaw evaluation. For when the engineer needs the numbers now.</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>From a tech who's been there</h3>
-            <p>UTCal was built by a practicing PAUT inspector. The workflow matches how UT actually works, not how someone imagined it might.</p>
+        <div class="card" style="margin-top:24px;">
+            <h3 style="margin-top:0;">Apple Watch</h3>
+            <p style="margin:0;">Pipe chart lookup right on your wrist. Check OD and wall thickness without touching your phone mid-scan. Included with Pro.</p>
         </div>
+
+        <h2>Works the way the job works</h2>
+        <p>No account. No internet required. Your setups stay on your device. UTCal was built by a practicing PAUT inspector — the workflow matches what actually happens in the field, not a product manager's idea of what UT looks like.</p>
 
         <h2>Legal &amp; Support</h2>
         <ul>

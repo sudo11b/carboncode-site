@@ -3,15 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FormulaPulse — CarbonCode</title>
-    <meta name="description" content="FormulaPulse — the F1 companion app for iPhone, iPad, and Apple Watch. Every session, standing, and story for race weekends.">
+    <title>FormulaPulse — F1 Companion App for iPhone &amp; Apple Watch</title>
+    <meta name="description" content="FormulaPulse is the F1 companion app for race weekends. News, schedule, standings, live timing, and race replay — for iPhone and Apple Watch.">
     <meta name="theme-color" content="#0A0A0A">
     <meta property="og:title" content="FormulaPulse — CarbonCode">
-    <meta property="og:description" content="The F1 companion app for race weekends.">
+    <meta property="og:description" content="The F1 companion app for race weekends. Every session, standing, and story.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://carboncode.app/formulapulse/">
     <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
     <link rel="stylesheet" href="../assets/style.css?v=4">
+    <style>
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0;
+        }
+        @media (max-width: 540px) {
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+        .feature-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+        }
+        .feature-item h3 {
+            font-size: 15px;
+            margin: 0 0 6px;
+        }
+        .feature-item p {
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            margin: 40px 0 12px;
+        }
+        .pro-label {
+            display: inline-block;
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--orange-bright);
+            background: var(--orange-dim);
+            border: 1px solid var(--orange-border);
+            border-radius: 100px;
+            padding: 2px 7px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .pricing-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0;
+        }
+        @media (max-width: 480px) {
+            .pricing-card { grid-template-columns: 1fr; }
+        }
+        .plan {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+        }
+        .plan.featured {
+            border-color: var(--orange-border);
+            background: var(--orange-dim);
+        }
+        .plan-name {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin: 0 0 8px;
+        }
+        .plan.featured .plan-name { color: var(--orange-bright); }
+        .plan-price {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text);
+            letter-spacing: -0.5px;
+            line-height: 1;
+        }
+        .plan-period {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin: 4px 0 10px;
+        }
+        .plan-note {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .plan.featured .plan-note { color: var(--orange-bright); }
+    </style>
 </head>
 <body>
     <nav class="top">
@@ -41,29 +135,79 @@
                 <h1 style="margin:0;">FormulaPulse</h1>
                 <span class="badge-soon">Coming Soon</span>
             </div>
-            <p class="lede">Your pit wall in your pocket. The full Formula 1 weekend in one focused app — every session, standing, and story, without the clutter.</p>
+            <p class="lede">Everything you need for a Formula 1 race weekend — news, schedule, standings, live timing, and race replay — in one focused app.</p>
             <div class="btn-row">
                 <a class="btn btn-ghost" href="support.html">Support</a>
-                <a class="btn btn-ghost" href="mailto:support.formulapulse@carboncode.app">Email us</a>
+                <a class="btn btn-ghost" href="mailto:support.formulapulse@carboncode.app">Contact</a>
             </div>
         </section>
 
-        <h2>Built for fans</h2>
+        <p class="section-label">Free features</p>
 
-        <div class="card">
-            <h3>Every session, every round</h3>
-            <p>Practice, Qualifying, Sprint, Race — with local-time reminders and at-a-glance standings.</p>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>Pulse — F1 News Feed</h3>
+                <p>Headlines from the top F1 outlets in one feed. Filter by driver, team, or source. "For You" carousel surfaces stories about your favorites first.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Full Season Schedule</h3>
+                <p>Every race weekend on the calendar. Upcoming rounds with session times in your local timezone. Completed races show the P1–P3 podium at a glance.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Driver &amp; Constructor Standings</h3>
+                <p>Live championship tables for both standings. Tap any driver for a full profile — career stats, current season results, and teammate comparison.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Live Timing (Beta)</h3>
+                <p>Real-time session data during practice, qualifying, and race. Positions, gaps, and sector times as they happen on track.</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>News without the doomscroll</h3>
-            <p>Pulse aggregates F1 news from trusted outlets. Save stories, read offline, summarize with AI — Pro subscribers only.</p>
+        <p class="section-label">Pro features <span class="pro-label">Subscription</span></p>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>Race Replay</h3>
+                <p>Re-live every Grand Prix after the checkered flag. Full telemetry-based replay with position changes, gaps, and the timing board exactly as it happened.</p>
+            </div>
+            <div class="feature-item">
+                <h3>AI Article Summary</h3>
+                <p>One tap and any story is summarized instantly. Get the key points without reading the whole article — useful when you're catching up between sessions.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Save &amp; Read Offline</h3>
+                <p>Bookmark any story to your Library and read it later, even without a connection. Good for travel days and spotty paddock WiFi.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Full Past Race Details</h3>
+                <p>Complete results and circuit information for every race in the season archive — not just the podium, every classified finisher.</p>
+            </div>
+            <div class="feature-item">
+                <h3>No Ads</h3>
+                <p>Clean reading throughout the app. No native ads in the news feed.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Apple Watch App</h3>
+                <p>F1 news headlines and the session schedule on your wrist. Glanceable and synced with your iPhone.</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Goes where you go</h3>
-            <p>Apple Watch companion with a context-aware complication that knows what's next on the F1 calendar.</p>
+        <h2>Pro pricing</h2>
+        <div class="pricing-card">
+            <div class="plan featured">
+                <div class="plan-name">Yearly</div>
+                <div class="plan-price">$24.99</div>
+                <div class="plan-period">per year</div>
+                <p class="plan-note">7-day free trial for new subscribers</p>
+            </div>
+            <div class="plan">
+                <div class="plan-name">Monthly</div>
+                <div class="plan-price">$2.99</div>
+                <div class="plan-period">per month</div>
+                <p class="plan-note">No trial. Cancel anytime.</p>
+            </div>
         </div>
+        <p style="font-size:13px;">Subscriptions are processed by Apple. Manage or cancel anytime in <strong>iOS Settings → [your name] → Subscriptions</strong>.</p>
 
         <h2>Legal &amp; Support</h2>
         <ul>
