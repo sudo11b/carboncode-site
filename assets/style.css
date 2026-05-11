@@ -514,18 +514,18 @@ footer .footer-copy {
 }
 
 .screen-label {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--text);
-    margin: 0 0 8px;
+    margin: 0 0 10px;
 }
 
 .screen-desc {
-    font-size: 14px;
+    font-size: 17px;
     color: var(--text-muted);
-    line-height: 1.6;
+    line-height: 1.65;
     margin: 0;
 }
 
