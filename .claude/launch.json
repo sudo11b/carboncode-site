@@ -4,8 +4,8 @@
     {
       "name": "carboncode-site",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8787", "--directory", "/Users/tomasramirez/Built with Claude/carboncode-site"],
-      "port": 8787
+      "runtimeArgs": ["-m", "http.server", "8080"],
+      "port": 8080
     }
   ]
 }

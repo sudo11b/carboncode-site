@@ -355,6 +355,8 @@ a.card-link:hover .arrow {
     border: 1px solid var(--green-border);
     border-radius: 100px;
     padding: 3px 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 .badge-live::before {
     content: '';
@@ -477,6 +479,57 @@ footer .footer-copy {
     font-size: 12px;
     color: var(--text-muted);
     opacity: 0.5;
+}
+
+/* ── App Screenshot Gallery ──────────────────── */
+
+.screens-wrap {
+    margin: 0 0 8px;
+}
+
+.screens-gallery {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 6px 24px 16px;
+}
+.screens-gallery::-webkit-scrollbar { display: none; }
+
+.screen-item {
+    flex: 0 0 auto;
+    width: 200px;
+    scroll-snap-align: start;
+    text-align: center;
+}
+
+.screen-item img {
+    width: 200px;
+    border-radius: 20px;
+    border: 1px solid var(--border-strong);
+    display: block;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
+}
+
+.screen-label {
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+}
+
+.screen-desc {
+    font-size: 11px;
+    color: var(--text-muted);
+    opacity: 0.55;
+    margin-top: 3px;
+    line-height: 1.4;
 }
 
 /* ── Responsive ──────────────────────────────── */
