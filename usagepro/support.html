@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Support — UsagePro for Claude</title>
+    <meta name="description" content="Support and FAQ for UsagePro for Claude: sign-in problems, multiple organizations, History, restoring your purchase, the menu bar item, and the free trial.">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../assets/style.css?v=6">
+</head>
+<body>
+    <nav class="top">
+        <a class="brand" href="/">Carbon<span>Code</span></a>
+        <div class="nav-links">
+            <a href="index.html">UsagePro</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </div>
+    </nav>
+
+    <main class="wrap">
+        <h1>Support</h1>
+        <p class="muted">UsagePro for Claude</p>
+
+        <div class="card">
+            <h3>Get in touch</h3>
+            <p>The fastest way to reach us is email. Please include your Mac model, your macOS version, the App version (shown in the About window), and a description of what you were doing. It helps us diagnose problems quickly.</p>
+            <p>Never send your password or your claude.ai session cookie. We don't need either one.</p>
+            <p><strong>Email:</strong> <a href="mailto:support.usagepro@carboncode.app">support.usagepro@carboncode.app</a></p>
+        </div>
+
+        <h2>App on the Mac App Store</h2>
+        <p><a href="https://apps.apple.com/app/id6817198315">View UsagePro for Claude on the Mac App Store →</a></p>
+
+        <h2>Common questions</h2>
+
+        <h3>Is UsagePro affiliated with Anthropic?</h3>
+        <p>No. UsagePro for Claude is an independent app from CarbonCode. It is not affiliated with or endorsed by Anthropic. Claude is a trademark of Anthropic, PBC.</p>
+
+        <h2>Sign-in and accounts</h2>
+
+        <h3>The sign-in window keeps coming back</h3>
+        <p>If claude.ai rejects the session UsagePro saved (an HTTP 401, which happens when a session expires or you sign out of claude.ai elsewhere), the App clears its stored session and shows the sign-in window again. Signing in again is normally all it takes, and the App carries on where it left off.</p>
+        <p>If it loops, meaning the sign-in window returns right after you sign in:</p>
+        <ol style="padding-left:22px;">
+            <li>Open Settings → Account → Sign Out, quit UsagePro with ⌘Q, reopen it, and sign in again.</li>
+            <li>Check that you can use claude.ai in your browser with the same account.</li>
+            <li>Check that the account has a Claude subscription. If none of your organizations has one, UsagePro shows "No Claude subscription found."</li>
+        </ol>
+        <p>Still stuck? Email us with your macOS version and App version.</p>
+
+        <h3>I belong to more than one organization</h3>
+        <p>If more than one of your organizations has a Claude subscription, UsagePro asks which one to monitor after you sign in. If only one qualifies, it picks that one without asking. To choose a different one later, open Settings → Account → Switch Organization…</p>
+
+        <h2>History and data</h2>
+
+        <h3>History says "Collecting data"</h3>
+        <p>That is expected on day one. claude.ai only reports your current usage, not your past usage, so there is nothing to backfill. UsagePro builds History by saving a snapshot on your Mac each time it refreshes, so the charts start empty and fill in over time.</p>
+        <p>It records only while the App is running, so expect gaps when UsagePro is quit or your Mac is asleep. Turning on Launch at login in Settings → General keeps the record more continuous.</p>
+
+        <h3>Does UsagePro send my usage to you?</h3>
+        <p>No. Your history is a local database on your Mac. There is no account with CarbonCode, no analytics, and no CarbonCode servers. The <a href="privacy.html">Privacy Policy</a> has the details.</p>
+
+        <h3>How do I remove my data?</h3>
+        <p>Open Settings → Account → Sign Out first. That deletes the saved session from your Keychain and clears the claude.ai cookies. Then quit and delete the App. To remove the local history and the sign-in window's stored data as well, delete the folder <code style="overflow-wrap:anywhere">~/Library/Containers/com.carboncode.claudeusagepro</code>, because macOS does not always remove it for you.</p>
+
+        <h2>Menu bar and Dock</h2>
+
+        <h3>The menu bar item is missing</h3>
+        <p>Menu bar managers such as Bartender can hide UsagePro's menu bar item. The App is still running: its Dock icon stays available and opens the full window. To bring the menu bar item back, change its setting in the menu bar manager. Settings → General also has separate Show in Dock and Show menu bar icon toggles.</p>
+
+        <h2>Trial and purchase</h2>
+
+        <h3>How does the free trial work?</h3>
+        <p>The first time you open UsagePro it explains the trial and the price, then you choose Start free trial or Unlock now. The trial lasts 7 days from that moment with everything unlocked. You don't need payment details to start it.</p>
+
+        <h3>What happens when the trial ends?</h3>
+        <p>The whole App locks: the dashboard, the menu bar figures, history, and alerts stop until you buy Full Unlock. Nothing is deleted. Your sign-in and your history are still there, and the App picks up when you unlock.</p>
+
+        <h3>Does reinstalling restart the trial?</h3>
+        <p>No. The trial start date is stored in your Keychain, so deleting and reinstalling the App does not reset the clock.</p>
+
+        <h3>What does Full Unlock cost?</h3>
+        <p>$2.99, once. It is a one-time purchase through the Mac App Store, not a subscription. The price may vary by storefront, and the price shown when you buy is the one that applies.</p>
+
+        <h3>How do I restore my purchase?</h3>
+        <p>Open Settings → Account → Restore Purchases, or use Restore Purchases on the unlock screen. Make sure you are signed in to the App Store with the same Apple ID you used to buy Full Unlock.</p>
+
+        <h3>Can I get a refund?</h3>
+        <p>Apple handles refunds for Mac App Store purchases, and we can't issue them directly. Submit a request at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
+        <h2>When something breaks</h2>
+
+        <h3>UsagePro shows errors or stopped updating</h3>
+        <p>UsagePro reads your usage from interfaces that claude.ai's own web app uses. Anthropic doesn't document those interfaces and can change them without notice. If that happens, the App may show errors or stop updating until it is updated. Email us with what you see and your App version so we can look into it.</p>
+
+        <h2>Legal</h2>
+        <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+    </main>
+
+    <footer>
+        <div class="brand-sm">Carbon<span>Code</span></div>
+        <div class="footer-identity">Indie Studio · Veteran Run</div>
+        <div class="footer-links">
+            <a href="/">CarbonCode</a>
+            <a href="index.html">UsagePro</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="support.html">Support</a>
+        </div>
+        <div class="footer-copy">© 2026 CarbonCode</div>
+    </footer>
+</body>
+</html>

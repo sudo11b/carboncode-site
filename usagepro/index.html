@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UsagePro for Claude — Claude Usage Monitor for Mac</title>
+    <meta name="description" content="Claude usage limits in your Mac menu bar: session and weekly percentages, reset countdowns, and local history. Independent app, not affiliated with Anthropic.">
+    <meta name="theme-color" content="#0A0A0A">
+    <meta property="og:title" content="UsagePro for Claude — CarbonCode">
+    <meta property="og:description" content="Your Claude usage limits in the Mac menu bar and a Dock app. Independent, not affiliated with Anthropic.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://carboncode.app/usagepro/">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../assets/style.css?v=6">
+    <style>
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            margin: 40px 0 12px;
+        }
+        .feature-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+            margin: 12px 0;
+        }
+        .feature-item h3 {
+            font-size: 15px;
+            margin: 0 0 6px;
+        }
+        .feature-item p {
+            font-size: 14px;
+            margin: 0 0 10px;
+            line-height: 1.5;
+        }
+        .feature-item p:last-child { margin-bottom: 0; }
+        .pricing-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0;
+        }
+        @media (max-width: 480px) {
+            .pricing-card { grid-template-columns: 1fr; }
+        }
+        .plan {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+        }
+        .plan.featured {
+            border-color: var(--orange-border);
+            background: var(--orange-dim);
+        }
+        .plan-name {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin: 0 0 8px;
+        }
+        .plan.featured .plan-name { color: var(--orange-bright); }
+        .plan-price {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text);
+            letter-spacing: -0.5px;
+            line-height: 1;
+        }
+        .plan-period {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin: 4px 0 10px;
+        }
+        .plan-note {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .plan.featured .plan-note { color: var(--orange-bright); }
+    </style>
+</head>
+<body>
+    <nav class="top">
+        <a class="brand" href="/">Carbon<span>Code</span></a>
+        <div class="nav-links">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="support.html">Support</a>
+        </div>
+    </nav>
+
+    <main class="wrap">
+        <section class="hero">
+            <svg width="36" height="36" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;margin-bottom:16px;">
+                <polygon points="180,100 140,169.28 60,169.28 20,100 60,30.72 140,30.72"
+                    fill="none" stroke="#E83A0A" stroke-width="5" stroke-linejoin="round"/>
+                <line x1="100" y1="100" x2="180" y2="100" stroke="#783218" stroke-width="2"/>
+                <line x1="100" y1="100" x2="140" y2="169.28" stroke="#783218" stroke-width="2"/>
+                <line x1="100" y1="100" x2="60" y2="169.28" stroke="#783218" stroke-width="2"/>
+                <line x1="100" y1="100" x2="20" y2="100" stroke="#783218" stroke-width="2"/>
+                <line x1="100" y1="100" x2="60" y2="30.72" stroke="#783218" stroke-width="2"/>
+                <line x1="100" y1="100" x2="140" y2="30.72" stroke="#783218" stroke-width="2"/>
+                <circle cx="100" cy="100" r="7" fill="#E83A0A"/>
+            </svg>
+            <span class="kicker">Claude Usage · macOS 14+</span>
+            <div style="display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:12px 0 16px;">
+                <h1 style="margin:0;">UsagePro for Claude</h1>
+                <span class="badge-soon">Coming soon</span>
+            </div>
+            <p class="lede">Your Claude usage limits in the menu bar, so you can see how much of the session and the week you have left without opening a browser tab.</p>
+            <p>An independent Mac app by CarbonCode. Not affiliated with or endorsed by Anthropic.</p>
+            <div class="btn-row">
+                <a class="btn btn-primary" href="https://apps.apple.com/app/id6817198315">View on the Mac App Store</a>
+                <a class="btn btn-ghost" href="support.html">Support</a>
+                <a class="btn btn-ghost" href="mailto:support.usagepro@carboncode.app">Contact</a>
+            </div>
+        </section>
+
+        <p class="section-label">What it does</p>
+
+        <div class="feature-item">
+            <h3>Dashboard</h3>
+            <p>A window that shows every limit your plan reports: the current session, the weekly limits, and any per-model limits. Each one gets a percentage and a reset countdown, and the number moves from green to yellow to red as you get close.</p>
+            <p>If your account has extra usage spend or a prepaid credit balance, those show up too. The set of limits differs by plan, and UsagePro shows what claude.ai returns for yours.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>Menu bar</h3>
+            <p>Your session percentage sits next to the menu bar icon. Click it for the rest of your limits. Turn on threshold alerts and you get a local notification when a limit crosses the level you pick.</p>
+            <p>The Dock icon and the menu bar icon can each be shown or hidden in Settings, and the app can launch at login.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>History</h3>
+            <p>claude.ai only reports where you are right now. UsagePro saves a snapshot each time it refreshes and charts them on your Mac: usage over time, the weekly breakdown by product, and a projection of where you are heading before the next reset. The History tab also shows your current credit balance.</p>
+            <p>History starts empty on day one and fills in as the app runs. It records only while UsagePro is running.</p>
+        </div>
+
+        <p class="section-label">Price</p>
+
+        <div class="pricing-card">
+            <div class="plan">
+                <p class="plan-name">Free trial</p>
+                <div class="plan-price">7 days</div>
+                <p class="plan-period">everything unlocked</p>
+                <p class="plan-note">No payment details needed to start.</p>
+            </div>
+            <div class="plan featured">
+                <p class="plan-name">Full Unlock</p>
+                <div class="plan-price">$2.99</div>
+                <p class="plan-period">one-time purchase</p>
+                <p class="plan-note">No subscription. Price may vary by storefront.</p>
+            </div>
+        </div>
+        <p>When the 7 days are up, the whole app locks until you buy Full Unlock. Nothing is deleted while it is locked, and your sign-in and history are still there when you unlock. Requires macOS 14 or later and a Claude subscription. Purchases go through the Mac App Store.</p>
+
+        <h2>How it handles your account</h2>
+        <p>You sign in on claude.ai's own login page, shown in a window inside the app. UsagePro keeps the resulting session cookie in the macOS Keychain and sends it only to claude.ai. Your usage history is a local database on your Mac.</p>
+        <p>There is no account with CarbonCode, no analytics, no third-party SDKs, and no CarbonCode servers. The app runs in the App Sandbox with outgoing network access only, and it checks in with claude.ai on the refresh interval you choose, once a minute at the fastest. Signing out clears the Keychain item and claude.ai's cookies. The full details are in the <a href="privacy.html">Privacy Policy</a>.</p>
+
+        <div class="card">
+            <h3>Independent, and dependent on claude.ai</h3>
+            <p>UsagePro for Claude is not affiliated with or endorsed by Anthropic. Claude is a trademark of Anthropic, PBC.</p>
+            <p>It reads your own usage from claude.ai's private endpoints, the same ones claude.ai's web app uses. Those are undocumented and can change without notice. If they do, UsagePro may stop working until it is updated.</p>
+        </div>
+
+        <h2>Legal &amp; Support</h2>
+        <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="support.html">Support &amp; FAQ</a></li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>Support: <a href="mailto:support.usagepro@carboncode.app">support.usagepro@carboncode.app</a></p>
+    </main>
+
+    <footer>
+        <div class="brand-sm">Carbon<span>Code</span></div>
+        <div class="footer-identity">Indie Studio · Veteran Run</div>
+        <div class="footer-links">
+            <a href="/">CarbonCode</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="support.html">Support</a>
+            <a href="mailto:support.usagepro@carboncode.app">Contact</a>
+        </div>
+        <div class="footer-copy">© 2026 CarbonCode</div>
+    </footer>
+</body>
+</html>

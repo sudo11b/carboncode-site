@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy Policy — UsagePro for Claude</title>
+    <meta name="description" content="Privacy Policy for UsagePro for Claude, the macOS menu bar and Dock app that shows your Claude usage. No analytics, no CarbonCode servers, session stored in the Keychain.">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../assets/style.css?v=6">
+</head>
+<body>
+    <nav class="top">
+        <a class="brand" href="/">Carbon<span>Code</span></a>
+        <div class="nav-links">
+            <a href="index.html">UsagePro</a>
+            <a href="terms.html">Terms</a>
+            <a href="support.html">Support</a>
+        </div>
+    </nav>
+
+    <main class="wrap">
+        <h1>Privacy Policy</h1>
+        <p class="muted">UsagePro for Claude · Last updated September 29, 2026 · Effective September 29, 2026</p>
+
+        <p>This Privacy Policy describes how CarbonCode ("we," "us," "our"), operated by Tomas Ramirez as a sole proprietor, handles information when you use the UsagePro for Claude application (the "App") on macOS. UsagePro runs on your Mac and talks directly to claude.ai. CarbonCode runs no servers for the App and sits nowhere in between, which means there is very little to tell you about data collection — because we collect essentially none.</p>
+
+        <h2>1. Summary</h2>
+        <div class="card">
+            <ul style="margin:0;">
+                <li>UsagePro does not require an account with CarbonCode.</li>
+                <li>The App saves your claude.ai session only in the macOS Keychain and sends it only to claude.ai. The sign-in web view keeps its own cookies and site data in the App's sandbox (section 4).</li>
+                <li>Your usage history is stored in a local database on your Mac and is never transmitted to us.</li>
+                <li>We do not use third-party analytics, advertising SDKs, or crash-reporting services.</li>
+                <li>Full Unlock is handled entirely by Apple — we never see your payment information.</li>
+                <li>UsagePro is independent and is not affiliated with or endorsed by Anthropic.</li>
+                <li>We do not knowingly collect data from children under 13.</li>
+            </ul>
+        </div>
+
+        <h2>2. Information we collect</h2>
+        <p>We do not collect, transmit, or store any personal information on our servers. The App operates on your Mac and connects to claude.ai on your behalf. This matches the "Data Not Collected" privacy label on the App's Mac App Store page.</p>
+
+        <h2>3. How the App uses your Claude account</h2>
+        <p>UsagePro shows your own Claude usage. To do that it needs to act as you on claude.ai.</p>
+        <h3>3.1 Signing in</h3>
+        <p>You sign in on claude.ai's own login page, displayed in a web view inside the App. The App does not read or store what you type on that page. It keeps only the session cookie that claude.ai issues once you are signed in. The App saves that cookie in the macOS Keychain and sends it only to claude.ai. The App does not write it to preferences or logs. The sign-in web view is standard WebKit, so, like a browser, it keeps its own cookies and site data, including claude.ai's, in the App's sandbox container (section 4). Sign Out removes the Keychain item and claude.ai's cookies (section 9).</p>
+        <h3>3.2 What the App requests from claude.ai</h3>
+        <p>Using that cookie, the App requests from claude.ai the list of organizations on your account (to find the one with your Claude subscription), your usage limits and reset times, extra-usage spend, the weekly breakdown by product, and your prepaid credit balance. It requests these at the refresh interval you choose in Settings: every 1, 5, or 10 minutes, so one minute is the fastest. Each scheduled refresh requests your usage and then your credit balance. The App also refreshes right away when you sign in, choose an organization, change the refresh interval, or unlock the App. The App does not access your conversations, your prompts, or Claude's responses.</p>
+        <p>The App relies on interfaces that claude.ai's own web app uses. They are private and undocumented, and Anthropic can change them without notice.</p>
+
+        <h2>4. What is stored on your Mac</h2>
+        <ul>
+            <li><strong>Session cookie</strong> — the App saves it in the macOS Keychain, as described above.</li>
+            <li><strong>Sign-in web view data</strong> — the sign-in page runs in a standard WebKit web view, which, like a browser, keeps its own cookies and site data in the App's sandbox container. That includes claude.ai's session cookie and cookies from the sign-in page's components, such as its bot check and any single sign-on provider. The App reads these cookies only to pick out the session cookie, and none of this data is sent to us.</li>
+            <li><strong>Trial start date</strong> — a single date, in the macOS Keychain, so that deleting and reinstalling the App does not restart the free trial. It is never sent anywhere.</li>
+            <li><strong>Purchase marker</strong> — if you buy Full Unlock, a small flag in the macOS Keychain recording that the App Store last confirmed the purchase. The App uses it only so that it does not briefly show the lock screen while the App Store is still answering at launch. It is replaced by the App Store's answer as soon as that arrives and is never sent anywhere.</li>
+            <li><strong>Usage history</strong> — a local SQLite database in the App's sandbox container. Each time the App refreshes, it records a snapshot of each limit's percentage and reset time and each product's share of the week, so it can chart them over time. Your credit balance and extra-usage spend are shown from the latest refresh and are not saved in that database. Nothing in it is sent to us or to anyone else.</li>
+            <li><strong>Preferences</strong> — settings such as the refresh interval, notification threshold, dashboard layout, and which organization you selected, stored in the App's local preferences.</li>
+        </ul>
+
+        <h2>5. Notifications</h2>
+        <p>Threshold alerts are off until you turn them on. When enabled, macOS asks for your permission, and the alerts are generated on your Mac by the App when a limit crosses the level you set. They are local notifications and are not delivered through any server of ours.</p>
+
+        <h2>6. Free trial and Full Unlock</h2>
+        <p>UsagePro includes a free 7-day trial. After the trial the App locks until you buy Full Unlock, a one-time in-app purchase processed by Apple through the Mac App Store. All payment processing is handled by Apple. CarbonCode does not receive, process, or store your payment card number or any other payment information. For purchase history and billing inquiries, contact Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
+        <h2>7. Apple platform services</h2>
+        <p>By using any Mac App Store app, Apple may collect certain usage and diagnostic data as described in Apple's Privacy Policy. This is governed by Apple, not CarbonCode. You can review and manage Apple's data collection in <strong>System Settings → Privacy &amp; Security → Analytics &amp; Improvements</strong>.</p>
+
+        <h2>8. Third-party services</h2>
+        <p>UsagePro does not integrate any third-party analytics, advertising, social media, or crash-reporting SDKs, and it uses no third-party code libraries. The only servers the App itself contacts are claude.ai, operated by Anthropic, and Apple's, for purchases.</p>
+        <p>claude.ai receives your session cookie and the requests described in section 3.2, just as it does when you use claude.ai in a browser. The sign-in page belongs to claude.ai, and anything it loads or asks you to do, including any single sign-on provider you choose, is governed by Anthropic and that provider. How Anthropic handles your data is set out in Anthropic's privacy policy, not this one.</p>
+
+        <h2>9. Data retention and deletion</h2>
+        <ul>
+            <li><strong>Sign out.</strong> Settings → Account → Sign Out deletes the session cookie from the Keychain and clears claude.ai's cookies from the App's web view. Cookies from other sites, and any site data the web view stored, stay in the App's sandbox container until you delete it (see the next item). Sign out before you delete the App, because macOS does not remove Keychain items when an app is deleted.</li>
+            <li><strong>History and web view data.</strong> Your usage history and the sign-in web view's data stay on your Mac until you remove them. To erase them, quit and delete the App, then delete the App's sandbox container folder, <code style="overflow-wrap:anywhere">~/Library/Containers/com.carboncode.claudeusagepro</code>. macOS does not always remove that folder when you delete an app.</li>
+            <li><strong>Trial start date and purchase marker.</strong> Both stay in the Keychain after the App is deleted. The trial start date is kept by design, so that a reinstall does not restart the trial. The purchase marker is re-checked against the App Store when the App runs.</li>
+            <li><strong>Our side.</strong> Because we do not collect data, we have nothing to retain or delete on our end.</li>
+        </ul>
+
+        <h2>10. Data security</h2>
+        <p>Your session cookie is protected by the macOS Keychain. The App runs in the macOS App Sandbox with outgoing network connections as its only network permission, and it talks to claude.ai over HTTPS. Your history stays on your Mac and is subject to macOS security features, including FileVault disk encryption if you have it enabled. We recommend keeping your Mac and macOS up to date.</p>
+
+        <h2>11. Children</h2>
+        <p>UsagePro is a utility for people who use a Claude subscription and is not directed at children. We do not knowingly collect personal information from anyone under 13. If you believe a child under 13 has provided us personal information, contact us and we will address it promptly.</p>
+
+        <h2>12. Your rights</h2>
+        <p>Since we do not collect or store personal data, there is no data for us to access, correct, or delete on your behalf. If you have questions about data Apple holds, refer to Apple's privacy request process at <a href="https://privacy.apple.com">privacy.apple.com</a>. For data Anthropic holds about your Claude account, contact Anthropic.</p>
+
+        <h2>13. Changes to this policy</h2>
+        <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top reflects the most recent revision. Continued use of the App after an update constitutes acceptance of the revised policy.</p>
+
+        <h2>14. Contact</h2>
+        <p>CarbonCode — Tomas Ramirez (sole proprietor)<br>
+        Email: <a href="mailto:support.usagepro@carboncode.app">support.usagepro@carboncode.app</a></p>
+    </main>
+
+    <footer>
+        <div class="brand-sm">Carbon<span>Code</span></div>
+        <div class="footer-identity">Indie Studio · Veteran Run</div>
+        <div class="footer-links">
+            <a href="/">CarbonCode</a>
+            <a href="index.html">UsagePro</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="support.html">Support</a>
+        </div>
+        <div class="footer-copy">© 2026 CarbonCode</div>
+    </footer>
+</body>
+</html>
