@@ -12,6 +12,7 @@ A one-person mobile studio building focused, well-crafted apps for iPhone and Ap
 
 - **UTCal** — Calibration tool for UT and PAUT inspectors. Live on the App Store. App Store URL: https://apps.apple.com/us/app/utcal/id6762418371
 - **FormulaPulse** — Formula 1 companion for race weekends. Currently in Apple review.
+- **UsagePro for Claude** — macOS menu bar + Dock app showing Claude.ai usage limits. Pages at `/usagepro/` (index, privacy, terms, support). Coming soon: Mac App Store id6817198315. Support: support.usagepro@carboncode.app. Independent, not affiliated with Anthropic; never imply otherwise.
 - (TheUnsolved was a learning project — do not feature it on marketing surfaces.)
 
 ---
