@@ -4,8 +4,21 @@
     {
       "name": "carboncode-site",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8080"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8080"
+      ],
       "port": 8080
+    },
+    {
+      "name": "l3sa-demo",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "cd l3sa-demo && npx wrangler dev --port 8788"
+      ],
+      "port": 8788
     }
   ]
 }

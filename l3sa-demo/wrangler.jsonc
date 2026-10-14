@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "l3sa-demo",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-01",
+
+  // Astro builds static HTML into ./dist. The Worker only runs for /api/*;
+  // every other path is served straight from the asset store.
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"],
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "l3sa-demo",
+      // Replace with the id printed by `npx wrangler d1 create l3sa-demo` before deploying.
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+
+  // Lets the Worker `import seedSql from "../db/seed.sql"` for the Reset button.
+  "rules": [{ "type": "Text", "globs": ["**/*.sql"], "fallthrough": true }]
+}

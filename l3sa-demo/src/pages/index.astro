@@ -1,0 +1,182 @@
+---
+import Base from '../layouts/Base.astro';
+import T from '../components/T.astro';
+import Wordmark from '../components/Wordmark.astro';
+---
+<Base>
+  <header class="site-header">
+    <div class="wrap">
+      <Wordmark />
+      <div class="header-actions">
+        <a class="header-phone" href="tel:+13463059893">346-305-9893</a>
+        <button type="button" class="lang-toggle" id="lang-toggle" lang="es" data-i18n-aria="nav.langLabel" aria-label="Ver esta página en español">
+          <T k="nav.lang" />
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- View: class list -->
+    <div id="view-list">
+      <section class="hero">
+        <div class="wrap">
+          <p class="eyebrow"><T k="hero.eyebrow" /></p>
+          <h1><T k="hero.title" /></h1>
+          <p><T k="hero.lead" /></p>
+          <a class="btn btn-light" href="#classes"><T k="hero.cta" /></a>
+        </div>
+      </section>
+
+      <div class="wrap">
+        <ul class="facts">
+          <li><h3><T k="facts.length.title" /></h3><p><T k="facts.length.body" /></p></li>
+          <li><h3><T k="facts.price.title" /></h3><p><T k="facts.price.body" /></p></li>
+          <li><h3><T k="facts.lang.title" /></h3><p><T k="facts.lang.body" /></p></li>
+        </ul>
+      </div>
+
+      <section class="section" id="classes" aria-labelledby="classes-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="classes-title"><T k="classes.title" /></h2>
+            <p><T k="classes.lead" /></p>
+          </div>
+          <p id="classes-status" class="empty"><T k="classes.loading" /></p>
+          <ul class="class-list" id="class-list"></ul>
+          <div class="ask-row">
+            <p><T k="classes.dateNotListed" /></p>
+            <a class="btn btn-secondary btn-small" href="#info"><T k="classes.askUs" /></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- View: register / standby -->
+    <section id="view-register" class="section" hidden>
+      <div class="wrap">
+        <a class="btn btn-ghost" href="#classes">← <T k="form.back" /></a>
+        <div class="panel">
+          <h2 id="register-title"></h2>
+          <div class="class-summary" id="register-summary"></div>
+          <p class="notice notice-warn" id="register-standby-notice" hidden><T k="form.standby.notice" /></p>
+
+          <form id="register-form" novalidate>
+            <input type="hidden" name="class_id" />
+            <div class="hp" aria-hidden="true">
+              <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+            </div>
+
+            <div class="field">
+              <label for="r-name"><T k="form.name" /></label>
+              <input id="r-name" name="name" type="text" autocomplete="name" maxlength="100" required />
+            </div>
+            <div class="field">
+              <label for="r-email"><T k="form.email" /></label>
+              <input id="r-email" name="email" type="email" autocomplete="email" inputmode="email" required />
+            </div>
+            <div class="field">
+              <label for="r-phone"><T k="form.phone" /></label>
+              <input id="r-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required />
+              <p class="hint"><T k="form.phone.hint" /></p>
+            </div>
+
+            <fieldset class="field" data-field="level">
+              <legend><T k="form.level" /></legend>
+              <div class="choices cols-3">
+                <label class="choice"><input type="radio" name="level" value="1" /><span><T k="form.level.1" /></span></label>
+                <label class="choice"><input type="radio" name="level" value="2" /><span><T k="form.level.2" /></span></label>
+                <label class="choice"><input type="radio" name="level" value="3" /><span><T k="form.level.3" /></span></label>
+              </div>
+            </fieldset>
+
+            <!-- Filled per class: a choice for SPRAT/IRATA classes, a single line otherwise -->
+            <fieldset class="field" data-field="cert" id="cert-field">
+              <legend><T k="form.cert" /></legend>
+              <div id="cert-choices"></div>
+            </fieldset>
+
+            <div class="form-actions">
+              <p class="form-error" id="register-error" role="alert" hidden></p>
+              <button class="btn btn-primary" type="submit" id="register-submit"></button>
+              <p class="note"><T k="form.payNote" /></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- View: request info -->
+    <section id="view-info" class="section" hidden>
+      <div class="wrap">
+        <a class="btn btn-ghost" href="#classes">← <T k="form.back" /></a>
+        <div class="panel">
+          <h2><T k="form.info.title" /></h2>
+          <p class="hint"><T k="form.info.lead" /></p>
+
+          <form id="info-form" novalidate>
+            <div class="hp" aria-hidden="true">
+              <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+            </div>
+            <div class="field">
+              <label for="i-class"><T k="form.class" /></label>
+              <select id="i-class" name="class_id"></select>
+            </div>
+            <div class="field">
+              <label for="i-name"><T k="form.name" /></label>
+              <input id="i-name" name="name" type="text" autocomplete="name" maxlength="100" required />
+            </div>
+            <div class="field">
+              <label for="i-email"><T k="form.email" /></label>
+              <input id="i-email" name="email" type="email" autocomplete="email" inputmode="email" required />
+            </div>
+            <div class="field">
+              <label for="i-phone"><T k="form.phone" /></label>
+              <input id="i-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required />
+              <p class="hint"><T k="form.phone.hint" /></p>
+            </div>
+            <div class="field">
+              <label for="i-message"><T k="form.message" /> <span class="opt">(<T k="form.optional" />)</span></label>
+              <textarea id="i-message" name="message" maxlength="2000"></textarea>
+            </div>
+            <div class="form-actions">
+              <p class="form-error" id="info-error" role="alert" hidden></p>
+              <button class="btn btn-primary" type="submit"><T k="form.submit.info" /></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- View: confirmation (rendered by script) -->
+    <section id="view-done" class="section" hidden>
+      <div class="wrap" id="done-content" tabindex="-1"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <Wordmark />
+      <div class="footer-grid">
+        <div>
+          <h3><T k="footer.contact" /></h3>
+          <p><T k="nav.call" />: <a href="tel:+13463059893">346-305-9893</a></p>
+          <p><a href="mailto:training@L3SA.com">training@L3SA.com</a></p>
+        </div>
+        <div>
+          <h3>L3SA</h3>
+          <p>27355 W Hardy Rd, Suite 105<br />Spring, TX 77373</p>
+        </div>
+        <div>
+          <h3><T k="footer.hours" /></h3>
+          <p><T k="footer.hoursValue" /></p>
+          <p style="margin-top:8px"><T k="footer.about" /></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    import '../scripts/public.ts';
+  </script>
+</Base>
