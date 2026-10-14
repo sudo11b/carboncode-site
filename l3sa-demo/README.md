@@ -42,7 +42,7 @@ npx wrangler login
 npx wrangler d1 create l3sa-demo
 ```
 
-Copy the `database_id` it prints into `wrangler.jsonc` (replace the `00000000-…` placeholder).
+Copy the `database_id` it prints into `wrangler.jsonc`. (Already done: the live database is `eb456a3a-…`.)
 
 ### Local
 
@@ -62,7 +62,7 @@ npm run db:seed:remote
 npm run deploy              # astro build + wrangler deploy
 ```
 
-To serve it at `l3sa.carboncode.app`, add a custom domain to the `l3sa-demo` Worker in the Cloudflare dashboard (Workers & Pages → l3sa-demo → Settings → Domains & Routes). Or add `"routes": [{ "pattern": "l3sa.carboncode.app", "custom_domain": true }]` to `wrangler.jsonc` and redeploy.
+Live at **https://l3sa.carboncode.app**. The custom domain is set by `routes` in `wrangler.jsonc`, so `npm run deploy` keeps it attached.
 
 ### Reset data
 

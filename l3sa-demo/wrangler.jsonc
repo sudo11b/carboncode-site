@@ -18,11 +18,12 @@
     {
       "binding": "DB",
       "database_name": "l3sa-demo",
-      // Replace with the id printed by `npx wrangler d1 create l3sa-demo` before deploying.
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "eb456a3a-0d3d-4f4f-8000-c0763eb0d77f",
       "migrations_dir": "migrations"
     }
   ],
+
+  "routes": [{ "pattern": "l3sa.carboncode.app", "custom_domain": true }],
 
   // Lets the Worker `import seedSql from "../db/seed.sql"` for the Reset button.
   "rules": [{ "type": "Text", "globs": ["**/*.sql"], "fallthrough": true }]
