@@ -20,7 +20,7 @@
 
     <main class="wrap">
         <h1>Privacy Policy</h1>
-        <p class="muted">FormulaPulse · Last updated October 14, 2026 · Effective October 14, 2026</p>
+        <p class="muted">FormulaPulse · Last updated October 18, 2026 · Effective October 18, 2026</p>
 
         <p>This Privacy Policy describes how CarbonCode ("we," "us," "our"), operated by Tomas Ramirez as a sole proprietor, collects, uses, and shares information when you use the FormulaPulse mobile application (the "App") on iOS, iPadOS, and watchOS.</p>
 
@@ -34,7 +34,7 @@
             <li>Free-tier users see native advertisements served by Google AdMob, which may collect device identifiers for ad delivery.</li>
             <li>We display a consent prompt for users in the EEA, UK, and Switzerland (via Google's User Messaging Platform) and show Apple's App Tracking Transparency prompt as required.</li>
             <li>Pit Wall, the AI race assistant in FormulaPulse Pro, sends your question to Anthropic's Claude to write each answer. It is off until you turn it on, and you can turn it off again in Settings. Anthropic does not use it to train models and deletes it within 30 days.</li>
-            <li>Story and digest summaries are written on your device and are not sent to any third party.</li>
+            <li>Story summaries are written on your device and are not sent to any third party. The short overview at the top of a daily digest is written by Claude from the public news headlines in that digest. Nothing about you or your device is sent for it.</li>
             <li>We do not knowingly collect data from children under 13.</li>
         </ul>
 
@@ -70,6 +70,9 @@
             <li>The Formula 1 timing data the question needs (lap times, gaps, tyre stints, results), which our server fetches from public sources.</li>
         </ul>
         <p>The conversation itself is kept on your device. Our server does not store your questions or Claude's answers. It keeps only a per-device count of questions asked, so that daily and monthly usage limits can be applied, and a short one-way hash of your device token for that purpose. Your APNs device token is the only identifier sent, and it is used to authenticate with our server. Anthropic processes the request under its commercial terms: it does not use the content to train models and deletes it within 30 days.</p>
+
+        <h3>Information sent for digest overviews</h3>
+        <p>Each daily digest notification opens with a short overview. Our server asks Anthropic's Claude to write it from the digest's news stories: the headline, the name of the outlet and a short description taken from that outlet's public RSS feed. Nothing about you or your device is included, and the same overview is used for everyone whose digest has the same stories. This applies to free and Pro users and has no opt-in, because the text sent is public news. Anthropic processes the request under its commercial terms: it does not use the content to train models and deletes it within 30 days. Our server does not store the text it sends or receives; it keeps only a daily count of overviews written and what they cost. If an overview cannot be written, your device writes one with Apple's on-device model, or the digest shows the list of headlines.</p>
 
         <h3>Information collected by advertising partners (free tier only)</h3>
         <p>If you are a free-tier user, FormulaPulse shows native advertisements served by Google AdMob. AdMob and its ad partners may collect and process:</p>
@@ -114,8 +117,8 @@
             <li>pagead2.googlesyndication.com</li>
         </ul>
 
-        <h3>Anthropic (Pit Wall only)</h3>
-        <p>Pit Wall answers are written by Claude, an AI model from Anthropic PBC. Anthropic receives only the data described under "Information sent for Pit Wall" and only after you turn Pit Wall on. Anthropic's handling of that data is governed by its <a href="https://www.anthropic.com/legal/privacy">Privacy Policy</a>. Pit Wall is a Pro feature; free-tier users never send data to Anthropic.</p>
+        <h3>Anthropic (Pit Wall and digest overviews)</h3>
+        <p>Pit Wall answers and digest overviews are written by Claude, an AI model from Anthropic PBC. For Pit Wall, Anthropic receives only the data described under "Information sent for Pit Wall" and only after you turn Pit Wall on. For digest overviews it receives only public news text, described under "Information sent for digest overviews". Anthropic's handling of that data is governed by its <a href="https://www.anthropic.com/legal/privacy">Privacy Policy</a>. Pit Wall is a Pro feature; no free-tier user's own data is ever sent to Anthropic.</p>
 
         <h3>Content sources</h3>
         <p>FormulaPulse displays publicly available F1 data (schedules, results, standings) from third-party sources including the Jolpica API and the official F1 CDN for driver and circuit imagery. News headlines and thumbnails are fetched from public RSS feeds of F1 news outlets. FormulaPulse does not republish full article content — tapping a headline opens the publisher's website in an in-app browser.</p>
@@ -151,6 +154,7 @@
             <li>On-device data: retained until you uninstall the App.</li>
             <li>APNs push tokens: retained while valid. Apple invalidates tokens when the App is uninstalled, and we purge invalid tokens from our server on receipt of APNs feedback.</li>
             <li>Pit Wall questions and answers: not stored on our server. Anthropic deletes the content it receives within 30 days. Past chats are kept on your device until you delete them or uninstall the App. Usage counts are kept on our server for up to one month.</li>
+            <li>Digest overviews: the news text sent to Anthropic is not stored on our server. Anthropic deletes the content it receives within 30 days. We keep only a daily count of overviews and their cost.</li>
             <li>Email correspondence: retained up to 2 years for support-history purposes, then deleted.</li>
         </ul>
 
