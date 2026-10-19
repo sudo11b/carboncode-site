@@ -3,116 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CarbonCode — Mobile Studio</title>
-    <meta name="description" content="CarbonCode is a one-person mobile studio building focused, well-crafted apps — starting on iPhone and Apple Watch.">
+    <title>CarbonCode — Indie App Studio and Website Rebuilds</title>
+    <meta name="description" content="CarbonCode is a one-person studio building focused apps for iPhone, Apple Watch and Mac, and rebuilding websites for small businesses.">
     <meta name="theme-color" content="#0A0A0A">
+    <link rel="canonical" href="https://carboncode.app/">
     <meta property="og:title" content="CarbonCode">
-    <meta property="og:description" content="Mobile apps that earn a spot on your home screen.">
+    <meta property="og:description" content="Mobile apps that earn a spot on your home screen. Plus custom website rebuilds for small businesses.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://carboncode.app">
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <link rel="stylesheet" href="assets/style.css?v=5">
+    <meta property="og:url" content="https://carboncode.app/">
+    <meta property="og:image" content="https://carboncode.app/assets/facebook_cover_LIVE.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="preload" href="/assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/style.css?v=7">
+    <script src="/assets/site.js?v=7" defer></script>
 </head>
 <body>
-    <nav class="top" style="justify-content: flex-end; padding-top: 16px;">
-        <div class="nav-links">
-            <a href="/utcal/">UTCal</a>
-            <a href="/formulapulse/">FormulaPulse</a>
-            <a href="/usagepro/">UsagePro</a>
-            <a href="/darkroom/">DarkRoom</a>
+<!-- @header current=home -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="brand" href="/" aria-label="CarbonCode home"><svg width="22" height="22" viewBox="0 0 200 200" aria-hidden="true"><polygon points="180,100 140,169.28 60,169.28 20,100 60,30.72 140,30.72" fill="none" stroke="#E83A0A" stroke-width="14" stroke-linejoin="round"/><circle cx="100" cy="100" r="20" fill="#E83A0A"/></svg><span class="brand-word">Carbon<span class="cc">Code</span></span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a href="/#apps">Apps</a>
+            <a href="/websites/">Websites</a>
             <a href="/about.html">About</a>
+            <a class="nav-cta" href="/websites/#contact">Start a project</a>
+        </nav>
+    </div>
+</header>
+<!-- /@header -->
+
+    <main id="main">
+        <div class="wide">
+            <section class="home-hero">
+                <div>
+                    <p class="hero-identity">Indie Studio · Veteran Run</p>
+                    <h1>Mobile apps that earn a spot on your home screen.</h1>
+                    <p class="lede">CarbonCode is a one-person studio. The apps are built nights and weekends by an Army infantry veteran and NDT inspector who codes. The same work ethic now goes into custom website rebuilds for small businesses.</p>
+                    <div class="btn-row">
+                        <a class="btn btn-primary" href="#apps">See the apps</a>
+                        <a class="btn btn-ghost" href="/websites/">Website rebuilds</a>
+                    </div>
+                </div>
+
+                <svg class="schematic" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <g transform="translate(160 160)">
+                        <circle r="138" fill="none" stroke="#1F1F1F" stroke-width="1" stroke-dasharray="3 5"/>
+                        <g stroke="#783218" stroke-width="1.5">
+                            <line x1="0" y1="0" x2="120" y2="0"/>
+                            <line x1="0" y1="0" x2="60" y2="103.92"/>
+                            <line x1="0" y1="0" x2="-60" y2="103.92"/>
+                            <line x1="0" y1="0" x2="-120" y2="0"/>
+                            <line x1="0" y1="0" x2="-60" y2="-103.92"/>
+                            <line x1="0" y1="0" x2="60" y2="-103.92"/>
+                        </g>
+                        <polygon points="120,0 60,103.92 -60,103.92 -120,0 -60,-103.92 60,-103.92" fill="none" stroke="#E83A0A" stroke-width="5" stroke-linejoin="round"/>
+                        <circle r="9" fill="#E83A0A"/>
+                        <g class="dim-line" stroke="#3a3a3a" stroke-width="1">
+                            <line x1="-120" y1="128" x2="120" y2="128"/>
+                            <line x1="-120" y1="122" x2="-120" y2="134"/>
+                            <line x1="120" y1="122" x2="120" y2="134"/>
+                            <line x1="136" y1="-103.92" x2="136" y2="103.92"/>
+                            <line x1="130" y1="-103.92" x2="142" y2="-103.92"/>
+                            <line x1="130" y1="103.92" x2="142" y2="103.92"/>
+                        </g>
+                        <text class="dim" x="0" y="146" text-anchor="middle">240.00</text>
+                        <text class="dim" x="150" y="4" transform="rotate(90 150 0)" text-anchor="middle">207.85</text>
+                        <text class="dim" x="-118" y="-118">30°</text>
+                    </g>
+                </svg>
+            </section>
+
+            <section class="section" id="apps" aria-labelledby="apps-title">
+                <div class="section-head">
+                    <h2 id="apps-title" class="h-display">Apps</h2>
+                    <p>Each one is built around a single job and ships when it does that job well. Two inspection tools, a Formula 1 companion, and a Mac utility for Claude users.</p>
+                </div>
+
+                <article class="app-feature">
+                    <div class="app-feature-text">
+                        <div class="app-meta">
+                            <span class="badge-new">New in 2.0</span>
+                            <span class="badge-live">On the App Store</span>
+                        </div>
+                        <h3>FormulaPulse</h3>
+                        <p>The F1 companion for race weekends. Version 2.0 adds Pit Wall: ask about pace, gaps, tyres and pit windows during a session, and get answers worked out from real timing data.</p>
+                        <ul class="app-points">
+                            <li>Racing news from more than a dozen sources in one feed</li>
+                            <li>Spoiler Shield holds results until you have watched</li>
+                            <li>Schedule, standings and circuit detail, plus Apple Watch</li>
+                        </ul>
+                        <p class="fine" style="margin-top:18px;">iPhone and Apple Watch. Free, with an optional Pro subscription.</p>
+                        <div class="app-links">
+                            <a href="/formulapulse/">What's in 2.0</a>
+                            <a href="https://apps.apple.com/us/app/formulapulse/id6762660256">App Store</a>
+                        </div>
+                    </div>
+                    <div class="app-feature-media">
+                        <img class="phone-shot" src="/assets/screens/fp2-pitwall.jpg" width="598" height="1300" alt="FormulaPulse Pit Wall answering whether one driver can catch another before the end of the race" loading="lazy">
+                        <img class="phone-shot offset" src="/assets/screens/fp2-pulse.jpg" width="598" height="1300" alt="FormulaPulse Pulse news feed with stories from several racing outlets" loading="lazy">
+                    </div>
+                </article>
+
+                <article class="app-feature">
+                    <div class="app-feature-media reverse">
+                        <img class="mac-shot" src="/assets/screens/up-dashboard.jpg" width="1600" height="1000" alt="UsagePro for Claude dashboard showing session, weekly and per-model usage with reset times" loading="lazy">
+                    </div>
+                    <div class="app-feature-text">
+                        <div class="app-meta">
+                            <span class="badge-live">On the Mac App Store</span>
+                        </div>
+                        <h3>UsagePro for Claude</h3>
+                        <p>Your Claude usage limits in the Mac menu bar and a dashboard window. See how much of the session and the week you have left, when each limit resets, and whether you will run out before it does.</p>
+                        <ul class="app-points">
+                            <li>Session percentage right next to the menu bar icon</li>
+                            <li>History charts that stay on your Mac</li>
+                            <li>Seven days free, then a one-time $2.99 unlock</li>
+                        </ul>
+                        <p class="fine" style="margin-top:18px;">macOS 14 or later. Independent app, not affiliated with Anthropic.</p>
+                        <div class="app-links">
+                            <a href="/usagepro/">About UsagePro</a>
+                            <a href="https://apps.apple.com/us/app/usagepro-for-claude/id6817198315?mt=12">Mac App Store</a>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="app-rows">
+                    <a class="app-row" href="/utcal/">
+                        <span class="app-row-name">UTCal</span>
+                        <span class="app-row-desc">Calibration math for ultrasonic and PAUT inspectors. Built by a UT tech who got tired of doing it on a notepad.<small>iPhone and Apple Watch</small></span>
+                        <span class="badge-live">On the App Store</span>
+                    </a>
+                    <a class="app-row" href="/darkroom/">
+                        <span class="app-row-name">DarkRoom</span>
+                        <span class="app-row-desc">Gamma radiography toolkit: shot times, source decay, boundaries and code limits for Ir-192 and Co-60.<small>iPhone and Apple Watch</small></span>
+                        <span class="badge-soon">Coming soon</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="section" id="websites" aria-labelledby="web-title">
+                <div class="section-head">
+                    <h2 id="web-title" class="h-display">Website rebuilds</h2>
+                    <p>A small-business site should do more than list a phone number. CarbonCode rebuilds them from scratch, fast on phones and shaped around how the business actually runs, with features like class schedules and online sign-up built in.</p>
+                </div>
+
+                <figure class="compare reticle" data-compare>
+                    <div class="compare-stage">
+                        <img class="compare-before" src="/assets/work/l3sa-before.jpg" width="1440" height="900" alt="The old L3SA website: a Google Sites page with a large logo and a block of contact text" loading="lazy">
+                        <img class="compare-after" src="/assets/work/l3sa-after.jpg" width="1440" height="900" alt="The rebuilt L3SA website: a clear headline, class prices, and a list of upcoming classes with sign-up buttons" loading="lazy">
+                        <span class="compare-line"></span>
+                        <span class="compare-knob"><svg width="20" height="12" viewBox="0 0 20 12" aria-hidden="true"><path d="M6 1 1 6l5 5M14 1l5 5-5 5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        <span class="compare-tag is-before">Before</span>
+                        <span class="compare-tag is-after">After</span>
+                        <input type="range" min="0" max="100" value="50" aria-label="Slide to compare the old and new L3SA website">
+                    </div>
+                    <figcaption>L3SA, a rope access training center in Texas. Drag to compare the old page with the rebuild.</figcaption>
+                </figure>
+
+                <div class="btn-row">
+                    <a class="btn btn-primary" href="/websites/">How rebuilds work</a>
+                    <a class="btn btn-ghost" href="/websites/#l3sa">Read the L3SA case study</a>
+                </div>
+            </section>
+
+            <section class="section" aria-labelledby="studio-title">
+                <div class="section-head">
+                    <h2 id="studio-title" class="h-display">One person, start to finish</h2>
+                    <p>No team, no ad budget, no marketing intern. The person who answers your email is the person who writes the code. Every project starts with a real problem worth solving and ships only when it is ready.</p>
+                    <p><a href="/about.html">More about the studio</a></p>
+                </div>
+            </section>
         </div>
-    </nav>
-
-    <main class="wrap">
-        <section class="hero" style="padding-top: 20px;">
-            <svg width="72" height="72" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;margin-bottom:20px;">
-                <polygon points="180,100 140,169.28 60,169.28 20,100 60,30.72 140,30.72"
-                    fill="none" stroke="#E83A0A" stroke-width="5" stroke-linejoin="round"/>
-                <line x1="100" y1="100" x2="180" y2="100" stroke="#783218" stroke-width="2"/>
-                <line x1="100" y1="100" x2="140" y2="169.28" stroke="#783218" stroke-width="2"/>
-                <line x1="100" y1="100" x2="60" y2="169.28" stroke="#783218" stroke-width="2"/>
-                <line x1="100" y1="100" x2="20" y2="100" stroke="#783218" stroke-width="2"/>
-                <line x1="100" y1="100" x2="60" y2="30.72" stroke="#783218" stroke-width="2"/>
-                <line x1="100" y1="100" x2="140" y2="30.72" stroke="#783218" stroke-width="2"/>
-                <circle cx="100" cy="100" r="7" fill="#E83A0A"/>
-            </svg>
-            <span class="wordmark">Carbon<span class="cc-code">Code</span></span>
-            <p class="hero-identity">Indie Studio · Veteran Run</p>
-            <p class="lede">Mobile apps that earn a spot on your home screen.</p>
-            <p style="color:var(--text-muted);font-size:16px;max-width:520px;line-height:1.65;margin:0 0 0;">
-                Built nights and weekends by an Army infantry veteran and NDT inspector —
-                starting on iPhone and Apple Watch, with Android on the roadmap.
-            </p>
-            <div class="btn-row">
-                <a class="btn btn-ghost" href="/about.html">About</a>
-            </div>
-        </section>
-
-        <h2>Apps</h2>
-
-        <a class="card-link" href="/utcal/">
-            <div class="card">
-                <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-                    <h3 style="margin:0;">UTCal</h3>
-                    <span class="badge-live">Live on App Store</span>
-                </div>
-                <p style="margin:0;">A calibration tool for ultrasonic and PAUT inspectors. Built by a UT tech who got tired of doing the math on a notepad.</p>
-                <p class="spec-line" style="margin-top:14px;">iOS · Apple Watch <span class="arrow">→</span></p>
-            </div>
-        </a>
-
-        <a class="card-link" href="/formulapulse/">
-            <div class="card">
-                <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-                    <h3 style="margin:0;">FormulaPulse</h3>
-                    <span class="badge-live">Live on App Store</span>
-                </div>
-                <p style="margin:0;">The F1 companion for race weekends. Every session, standing, and story — without the clutter.</p>
-                <p class="spec-line" style="margin-top:14px;">iOS · watchOS <span class="arrow">→</span></p>
-            </div>
-        </a>
-
-        <a class="card-link" href="/usagepro/">
-            <div class="card">
-                <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-                    <h3 style="margin:0;">UsagePro for Claude</h3>
-                    <span class="badge-soon">Coming soon</span>
-                </div>
-                <p style="margin:0;">Your Claude usage limits in the Mac menu bar and a Dock app. Session and weekly percentages, reset countdowns, and local history. Independent, not affiliated with Anthropic.</p>
-                <p class="spec-line" style="margin-top:14px;">macOS 14+ · Menu bar <span class="arrow">→</span></p>
-            </div>
-        </a>
-
-        <a class="card-link" href="/darkroom/">
-            <div class="card">
-                <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-                    <h3 style="margin:0;">DarkRoom</h3>
-                    <span class="badge-soon">Coming soon</span>
-                </div>
-                <p style="margin:0;">Gamma radiography toolkit for NDT techs: shot times, source decay, boundaries and code limits for Ir-192 and Co-60, with a shot timer on Apple Watch.</p>
-                <p class="spec-line" style="margin-top:14px;">iPhone + Apple Watch · NDT <span class="arrow">→</span></p>
-            </div>
-        </a>
-
-        <h2>The Studio</h2>
-        <p>CarbonCode is a one-person operation. No team, no ad budget, no marketing intern. Every app starts with a real problem worth solving and ships only when it earns its place.</p>
-        <p><a href="/about.html">Read the full story →</a></p>
     </main>
 
-    <footer>
-        <div class="brand-sm">Carbon<span>Code</span></div>
-        <div class="footer-identity">Indie Studio · Veteran Run</div>
-        <div class="footer-links">
-            <a href="https://www.facebook.com/profile.php?id=61564563694055">Facebook</a>
-            <a href="mailto:support@carboncode.app">Contact</a>
-            <a href="/utcal/">UTCal</a>
-            <a href="/formulapulse/">FormulaPulse</a>
-            <a href="/usagepro/">UsagePro</a>
-            <a href="/darkroom/">DarkRoom</a>
-            <a href="/about.html">About</a>
+<!-- @footer -->
+<footer class="site-footer">
+    <div class="site-footer-inner">
+        <div>
+            <a class="brand" href="/"><svg width="22" height="22" viewBox="0 0 200 200" aria-hidden="true"><polygon points="180,100 140,169.28 60,169.28 20,100 60,30.72 140,30.72" fill="none" stroke="#E83A0A" stroke-width="14" stroke-linejoin="round"/><circle cx="100" cy="100" r="20" fill="#E83A0A"/></svg><span class="brand-word">Carbon<span class="cc">Code</span></span></a>
+            <div class="footer-identity">Indie Studio · Veteran Run</div>
+            <p class="footer-tag">Mobile apps that earn a spot on your home screen.</p>
         </div>
-        <div class="footer-copy">© 2026 CarbonCode</div>
-    </footer>
+        <div>
+            <h2>Apps</h2>
+            <ul>
+                <li><a href="/formulapulse/">FormulaPulse</a></li>
+                <li><a href="/usagepro/">UsagePro for Claude</a></li>
+                <li><a href="/utcal/">UTCal</a></li>
+                <li><a href="/darkroom/">DarkRoom</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Studio</h2>
+            <ul>
+                <li><a href="/websites/">Website rebuilds</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61564563694055">Facebook</a></li>
+                <li><a href="mailto:support@carboncode.app">support@carboncode.app</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-copy">© 2026 CarbonCode. Texas, USA.</div>
+</footer>
+<!-- /@footer -->
 </body>
 </html>

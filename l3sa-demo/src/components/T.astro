@@ -1,8 +1,0 @@
----
-// Translatable text. Renders English at build time; src/scripts/i18n.ts swaps
-// it when the visitor picks Spanish.
-import { strings, type StringKey } from '../i18n/strings';
-interface Props { k: StringKey }
-const { k } = Astro.props;
----
-<span data-i18n={k}>{strings.en[k]}</span>

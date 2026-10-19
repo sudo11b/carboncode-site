@@ -7,22 +7,27 @@
     <meta name="description" content="That page doesn't exist on carboncode.app.">
     <meta name="robots" content="noindex">
     <meta name="theme-color" content="#0A0A0A">
+    <!-- Root-absolute paths only: this page is served at the depth of whatever bad URL was requested. -->
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-    <link rel="stylesheet" href="/assets/style.css?v=6">
+    <link rel="stylesheet" href="/assets/style.css?v=7">
 </head>
 <body>
-    <nav class="top">
-        <a class="brand" href="/">Carbon<span>Code</span></a>
-        <div class="nav-links">
-            <a href="/utcal/">UTCal</a>
-            <a href="/formulapulse/">FormulaPulse</a>
-            <a href="/usagepro/">UsagePro</a>
-            <a href="/darkroom/">DarkRoom</a>
+<!-- @header current=none -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="brand" href="/" aria-label="CarbonCode home"><svg width="22" height="22" viewBox="0 0 200 200" aria-hidden="true"><polygon points="180,100 140,169.28 60,169.28 20,100 60,30.72 140,30.72" fill="none" stroke="#E83A0A" stroke-width="14" stroke-linejoin="round"/><circle cx="100" cy="100" r="20" fill="#E83A0A"/></svg><span class="brand-word">Carbon<span class="cc">Code</span></span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a href="/#apps">Apps</a>
+            <a href="/websites/">Websites</a>
             <a href="/about.html">About</a>
-        </div>
-    </nav>
+            <a class="nav-cta" href="/websites/#contact">Start a project</a>
+        </nav>
+    </div>
+</header>
+<!-- /@header -->
 
-    <main class="wrap">
+    <main id="main" class="wrap">
         <section class="hero">
             <svg width="72" height="72" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;margin-bottom:20px;">
                 <path d="M30,54 L30,30 L54,30" fill="none" stroke="#E83A0A" stroke-width="6" stroke-linecap="square"/>
@@ -36,81 +41,44 @@
             </svg>
             <span class="kicker">Error 404</span>
             <h1>Page not found</h1>
-            <p class="lede">Nothing lives at this address.</p>
-            <p style="color:var(--text-muted);font-size:16px;max-width:520px;line-height:1.65;margin:0;">
-                The link may be out of date, or the URL may have a typo in it.
-                Everything on the site is reachable from the homepage.
-            </p>
+            <p class="lede">Nothing lives at this address. The link may be out of date, or the URL may have a typo in it.</p>
             <div class="btn-row">
-                <a class="btn btn-primary" href="/">Go to homepage</a>
-                <a class="btn btn-ghost" href="/about.html">About</a>
+                <a class="btn btn-primary" href="/">Go to the homepage</a>
+                <a class="btn btn-ghost" href="/#apps">Apps</a>
+                <a class="btn btn-ghost" href="/websites/">Website rebuilds</a>
             </div>
         </section>
-
-        <h2>Apps</h2>
-
-        <a class="card-link" href="/utcal/">
-            <div class="card">
-                <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-                    <h3 style="margin:0;">UTCal</h3>
-                    <span class="badge-live">Live on App Store</span>
-                </div>
-                <p style="margin:0;">Calibration tool for UT and PAUT inspectors.</p>
-                <p class="spec-line" style="margin-top:12px;">View UTCal <span class="arrow">&rarr;</span></p>
-            </div>
-        </a>
-
-        <a class="card-link" href="/formulapulse/">
-            <div class="card">
-                <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-                    <h3 style="margin:0;">FormulaPulse</h3>
-                    <span class="badge-live">Live on App Store</span>
-                </div>
-                <p style="margin:0;">F1 companion app for race weekends.</p>
-                <p class="spec-line" style="margin-top:12px;">View FormulaPulse <span class="arrow">&rarr;</span></p>
-            </div>
-        </a>
-
-        <a class="card-link" href="/usagepro/">
-            <div class="card">
-                <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-                    <h3 style="margin:0;">UsagePro for Claude</h3>
-                    <span class="badge-soon">Coming soon</span>
-                </div>
-                <p style="margin:0;">Claude usage limits in the Mac menu bar.</p>
-                <p class="spec-line" style="margin-top:12px;">View UsagePro <span class="arrow">&rarr;</span></p>
-            </div>
-        </a>
-
-        <a class="card-link" href="/darkroom/">
-            <div class="card">
-                <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-                    <h3 style="margin:0;">DarkRoom</h3>
-                    <span class="badge-soon">Coming soon</span>
-                </div>
-                <p style="margin:0;">Gamma radiography toolkit for NDT techs.</p>
-                <p class="spec-line" style="margin-top:12px;">View DarkRoom <span class="arrow">&rarr;</span></p>
-            </div>
-        </a>
-
-        <h2>Looking for support?</h2>
-        <p>App support: <a href="/utcal/support.html">UTCal</a> &middot; <a href="/formulapulse/support.html">FormulaPulse</a> &middot; <a href="/usagepro/support">UsagePro</a> &middot; <a href="/darkroom/support">DarkRoom</a></p>
-        <p>Anything else: <a href="mailto:support@carboncode.app">support@carboncode.app</a></p>
     </main>
 
-    <footer>
-        <div class="brand-sm">Carbon<span>Code</span></div>
-        <div class="footer-identity">Indie Studio · Veteran Run</div>
-        <div class="footer-links">
-            <a href="https://www.facebook.com/profile.php?id=61564563694055">Facebook</a>
-            <a href="mailto:support@carboncode.app">Contact</a>
-            <a href="/utcal/">UTCal</a>
-            <a href="/formulapulse/">FormulaPulse</a>
-            <a href="/usagepro/">UsagePro</a>
-            <a href="/darkroom/">DarkRoom</a>
-            <a href="/about.html">About</a>
+<!-- @footer -->
+<footer class="site-footer">
+    <div class="site-footer-inner">
+        <div>
+            <a class="brand" href="/"><svg width="22" height="22" viewBox="0 0 200 200" aria-hidden="true"><polygon points="180,100 140,169.28 60,169.28 20,100 60,30.72 140,30.72" fill="none" stroke="#E83A0A" stroke-width="14" stroke-linejoin="round"/><circle cx="100" cy="100" r="20" fill="#E83A0A"/></svg><span class="brand-word">Carbon<span class="cc">Code</span></span></a>
+            <div class="footer-identity">Indie Studio · Veteran Run</div>
+            <p class="footer-tag">Mobile apps that earn a spot on your home screen.</p>
         </div>
-        <div class="footer-copy">© 2026 CarbonCode</div>
-    </footer>
+        <div>
+            <h2>Apps</h2>
+            <ul>
+                <li><a href="/formulapulse/">FormulaPulse</a></li>
+                <li><a href="/usagepro/">UsagePro for Claude</a></li>
+                <li><a href="/utcal/">UTCal</a></li>
+                <li><a href="/darkroom/">DarkRoom</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Studio</h2>
+            <ul>
+                <li><a href="/websites/">Website rebuilds</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61564563694055">Facebook</a></li>
+                <li><a href="mailto:support@carboncode.app">support@carboncode.app</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-copy">© 2026 CarbonCode. Texas, USA.</div>
+</footer>
+<!-- /@footer -->
 </body>
 </html>

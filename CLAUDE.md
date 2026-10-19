@@ -11,8 +11,13 @@ A one-person mobile studio building focused, well-crafted apps for iPhone and Ap
 ## Current Apps
 
 - **UTCal** — Calibration tool for UT and PAUT inspectors. Live on the App Store. App Store URL: https://apps.apple.com/us/app/utcal/id6762418371
-- **FormulaPulse** — Formula 1 companion for race weekends. Currently in Apple review.
-- **UsagePro for Claude** — macOS menu bar + Dock app showing Claude.ai usage limits. Pages at `/usagepro/` (index, privacy, terms, support). Coming soon: Mac App Store id6817198315. Support: support.usagepro@carboncode.app. Independent, not affiliated with Anthropic; never imply otherwise.
+- **FormulaPulse** — Formula 1 companion for race weekends. Live on the App Store (id6762660256), version 2.0 since 2026-10-15. 2.0's headline feature is **Pit Wall**, a Pro race assistant that writes its answers with Claude (Anthropic); always disclose that wherever Pit Wall is described. Pro: $2.99/mo with a 7-day trial, $24.99/yr with no trial. Session Replay was retired in 2.0; don't mention it. Screens: `assets/screens/fp2-*.jpg`.
+- **UsagePro for Claude** — macOS menu bar + Dock app showing Claude.ai usage limits. Pages at `/usagepro/` (index, privacy, terms, support). Live on the Mac App Store since 2026-10-10: https://apps.apple.com/us/app/usagepro-for-claude/id6817198315?mt=12 . Free download, 7-day trial, then $2.99 one-time Full Unlock. Support: support.usagepro@carboncode.app. Independent, not affiliated with Anthropic; never imply otherwise.
+- **DarkRoom** — Gamma radiography toolkit (iPhone + Apple Watch). Pages at `/darkroom/`. Coming soon.
+
+## Services
+
+- **Website rebuilds** — `/websites/`. Custom rebuilds for small-business sites, with features built to order (scheduling, sign-up, bilingual, admin pages). Case study: **L3SA** (rope access training, Spring TX), before/after screenshots in `assets/work/`. The real L3SA build lives in `~/Built with Claude/l3sa-site` and is hosted in the separate "CarbonCode Clients" Cloudflare account; nothing of it lives in this repo. Contact for projects: support@carboncode.app (subject "Website rebuild").
 - (TheUnsolved was a learning project — do not feature it on marketing surfaces.)
 
 ---
@@ -179,23 +184,27 @@ The repo already follows a flat per-app subfolder pattern. Don't restructure int
 
 ```
 /
-├── index.html              # Studio homepage
+├── index.html              # Studio homepage (apps + website rebuilds teaser)
+├── about.html              # Long About content
+├── 404.html                # Branded 404 (root-absolute paths only)
+├── websites/index.html     # Website rebuild services + L3SA case study
 ├── assets/
-│   └── style.css           # Shared stylesheet — extend this, don't create new ones
-├── formulapulse/
+│   ├── style.css           # Shared stylesheet — extend this, don't create new ones
+│   ├── site.js             # Tiny shared script (before/after slider)
+│   ├── screens/            # App screenshots (fp2-*, up-*)
+│   └── work/               # Client before/after screenshots
+├── formulapulse/  utcal/  usagepro/  darkroom/
 │   ├── index.html          # App landing
 │   ├── privacy.html        # App Store privacy policy
-│   ├── terms.html          # App Store terms of use + subscription terms
-│   └── support.html        # App Store support URL + FAQ
-├── utcal/                  # (TODO — same pattern as formulapulse/)
-│   ├── index.html
-│   ├── privacy.html
-│   ├── terms.html
-│   └── support.html
-├── about.html              # (TODO — long About content)
+│   ├── terms.html          # Terms of use (+ subscription terms)
+│   └── support.html        # Support URL + FAQ
+├── rt-quiz/                # Unlisted; never link it
+├── tools/sync-chrome.py    # Rewrites the shared header/app bar/footer on every page
 ├── CLAUDE.md               # This file
 └── README.md               # Human-facing project docs (operational, not brand)
 ```
+
+**Shared header and footer:** every page carries its own copy of the site header, the per-app sub-nav and the footer between `<!-- @header ... -->`/`<!-- /@header -->`, `<!-- @appbar app -->` and `<!-- @footer -->` markers. To change nav or footer links, edit the templates in `tools/sync-chrome.py` and run `python3 tools/sync-chrome.py`. It's a maintenance helper, not a build step; the site still deploys as plain files.
 
 URLs follow the file structure:
 
@@ -204,7 +213,8 @@ URLs follow the file structure:
 - `https://carboncode.app/formulapulse/privacy.html` — Privacy
 - `https://carboncode.app/formulapulse/terms.html` — Terms
 - `https://carboncode.app/formulapulse/support.html` — Support
-- (Same pattern for `/utcal/...` once added)
+- Same pattern for `/utcal/`, `/usagepro/`, `/darkroom/`
+- `https://carboncode.app/websites/` — Website rebuild services
 
 ### Hosting & deployment — don't break this
 

@@ -3,269 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FormulaPulse — F1 Companion App for iPhone &amp; Apple Watch</title>
-    <meta name="description" content="FormulaPulse is the F1 companion app for race weekends. News, schedule, standings, live timing, and race replay — for iPhone and Apple Watch.">
+    <title>FormulaPulse 2.0 — F1 Companion for iPhone and Apple Watch</title>
+    <meta name="description" content="FormulaPulse is a Formula 1 companion for race weekends. Version 2.0 adds Pit Wall, an assistant that answers pace, tyre and pit strategy questions from real timing data.">
     <meta name="theme-color" content="#0A0A0A">
-    <meta property="og:title" content="FormulaPulse — CarbonCode">
-    <meta property="og:description" content="The F1 companion app for race weekends. Every session, standing, and story.">
+    <link rel="canonical" href="https://carboncode.app/formulapulse/">
+    <meta property="og:title" content="FormulaPulse 2.0 — CarbonCode">
+    <meta property="og:description" content="News, schedule, standings, and Pit Wall: race strategy answers from real timing data.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://carboncode.app/formulapulse/">
-    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
-    <link rel="stylesheet" href="../assets/style.css?v=6">
-    <style>
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 16px 0;
-        }
-        @media (max-width: 540px) {
-            .feature-grid { grid-template-columns: 1fr; }
-        }
-        .feature-item {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 18px 20px;
-        }
-        .feature-item h3 {
-            font-size: 15px;
-            margin: 0 0 6px;
-        }
-        .feature-item p {
-            font-size: 14px;
-            margin: 0;
-            line-height: 1.5;
-        }
-        .section-label {
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--text-muted);
-            margin: 40px 0 12px;
-        }
-        .pro-label {
-            display: inline-block;
-            font-size: 9px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--orange-bright);
-            background: var(--orange-dim);
-            border: 1px solid var(--orange-border);
-            border-radius: 100px;
-            padding: 2px 7px;
-            margin-left: 8px;
-            vertical-align: middle;
-        }
-        .pricing-card {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 16px 0;
-        }
-        @media (max-width: 480px) {
-            .pricing-card { grid-template-columns: 1fr; }
-        }
-        .plan {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 20px;
-        }
-        .plan.featured {
-            border-color: var(--orange-border);
-            background: var(--orange-dim);
-        }
-        .plan-name {
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            margin: 0 0 8px;
-        }
-        .plan.featured .plan-name { color: var(--orange-bright); }
-        .plan-price {
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--text);
-            letter-spacing: -0.5px;
-            line-height: 1;
-        }
-        .plan-period {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin: 4px 0 10px;
-        }
-        .plan-note {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin: 0;
-        }
-        .plan.featured .plan-note { color: var(--orange-bright); }
-    </style>
+    <meta property="og:image" content="https://carboncode.app/assets/screens/fp2-pitwall.jpg">
+    <meta name="apple-itunes-app" content="app-id=6762660256">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/assets/style.css?v=7">
 </head>
 <body>
-    <nav class="top">
-        <a class="brand" href="/">Carbon<span>Code</span></a>
-        <div class="nav-links">
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <a href="support.html">Support</a>
+<!-- @header current=apps -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="brand" href="/" aria-label="CarbonCode home"><svg width="22" height="22" viewBox="0 0 200 200" aria-hidden="true"><polygon points="180,100 140,169.28 60,169.28 20,100 60,30.72 140,30.72" fill="none" stroke="#E83A0A" stroke-width="14" stroke-linejoin="round"/><circle cx="100" cy="100" r="20" fill="#E83A0A"/></svg><span class="brand-word">Carbon<span class="cc">Code</span></span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a href="/#apps" aria-current="page">Apps</a>
+            <a href="/websites/">Websites</a>
+            <a href="/about.html">About</a>
+            <a class="nav-cta" href="/websites/#contact">Start a project</a>
+        </nav>
+    </div>
+</header>
+<!-- /@header -->
+<!-- @appbar formulapulse -->
+<nav class="app-bar" aria-label="FormulaPulse">
+    <a class="app-bar-name" href="/formulapulse/" aria-current="page">FormulaPulse</a>
+    <a href="/formulapulse/privacy.html">Privacy</a>
+    <a href="/formulapulse/terms.html">Terms</a>
+    <a href="/formulapulse/support.html">Support</a>
+</nav>
+<!-- /@appbar -->
+
+    <main id="main">
+        <div class="wrap">
+            <section class="hero">
+                <div class="app-meta">
+                    <span class="badge-new">Version 2.0</span>
+                    <span class="badge-live">On the App Store</span>
+                </div>
+                <h1>FormulaPulse</h1>
+                <p class="lede">The F1 companion for race weekends. News, schedule and standings, and now Pit Wall: an assistant that answers race questions from real timing data.</p>
+                <div class="btn-row">
+                    <a class="appstore-badge" href="https://apps.apple.com/us/app/formulapulse/id6762660256">
+                        <svg width="20" height="24" viewBox="0 0 24 29" fill="#fff" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.05 20.28c-.98 1.46-1.99 2.93-3.6 2.96-1.59.03-2.1-.95-3.93-.95-1.82 0-2.38.92-3.9.98-1.56.07-2.74-1.58-3.74-3.03C-.16 16.91-.96 11.64 1.04 8.22 2.03 6.54 3.75 5.47 5.6 5.44c1.53-.02 2.97 1.03 3.9 1.03.94 0 2.69-1.27 4.53-1.08.77.03 2.94.31 4.33 2.35-.11.07-2.58 1.51-2.55 4.52.03 3.6 3.15 4.8 3.19 4.81-.04.09-.5 1.72-1.95 3.21zM13.05 3.25c.87-.99 2.3-1.73 3.49-1.78.15 1.39-.41 2.8-1.24 3.8-.82 1.01-2.18 1.8-3.51 1.69-.17-1.37.49-2.79 1.26-3.71z"/>
+                        </svg>
+                        <span class="badge-text">
+                            <small>Download on the</small>
+                            <strong>App Store</strong>
+                        </span>
+                    </a>
+                    <a class="btn btn-ghost" href="support.html">Support</a>
+                </div>
+                <p class="fine" style="margin-top:14px;">iPhone and Apple Watch. Free to download, with an optional Pro subscription.</p>
+            </section>
+
+            <section class="app-feature app-feature-tight" aria-labelledby="pitwall-title">
+                <div class="app-feature-text">
+                    <span class="kicker">New in 2.0</span>
+                    <h2 id="pitwall-title" class="h-display" style="margin-top:0;">Pit Wall</h2>
+                    <p>Ask the questions you would ask a race engineer. What is the pit lane loss here? Who has the pace right now? Can the car behind catch the one ahead, and how many laps would it take?</p>
+                    <p>Answers are built from lap times, sector times, gaps, tyre compounds, stint ages and pit stops. The maths is computed, not guessed, and when a number isn't available Pit Wall says so instead of filling the gap.</p>
+                    <p class="fine">Pit Wall is part of FormulaPulse Pro and needs a connection. It uses Claude, an AI model from Anthropic, to write its answers, and asks you before the first question. It sends your question and the race data it needs; Anthropic does not use that data to train its models. Article summaries are generated on your iPhone.</p>
+                </div>
+                <div class="app-feature-media">
+                    <div class="reticle reticle-sm">
+                        <img class="phone-shot" src="/assets/screens/fp2-pitwall.jpg" width="598" height="1300" alt="Pit Wall answering whether one driver can catch another, and what a pit stop would cost at this circuit">
+                    </div>
+                </div>
+            </section>
+
+            <h2>Inside the app</h2>
+            <div class="screens" tabindex="0" aria-label="FormulaPulse screenshots, scrolls sideways">
+                <figure>
+                    <img class="phone-shot" src="/assets/screens/fp2-pulse.jpg" width="598" height="1300" alt="Pulse news feed" loading="lazy">
+                    <figcaption><strong>Pulse</strong>News from more than a dozen sources. Breaking and trending stories surface on their own.</figcaption>
+                </figure>
+                <figure>
+                    <img class="phone-shot" src="/assets/screens/fp2-schedule.jpg" width="598" height="1300" alt="Schedule with a countdown to the next race" loading="lazy">
+                    <figcaption><strong>Schedule</strong>The full season with countdowns and session times in your timezone.</figcaption>
+                </figure>
+                <figure>
+                    <img class="phone-shot" src="/assets/screens/fp2-standings.jpg" width="598" height="1300" alt="Standings with a points progression chart" loading="lazy">
+                    <figcaption><strong>Standings</strong>Driver and constructor tables with a points progression chart.</figcaption>
+                </figure>
+                <figure>
+                    <img class="phone-shot" src="/assets/screens/fp2-library.jpg" width="598" height="1300" alt="Library with daily summaries and saved stories" loading="lazy">
+                    <figcaption><strong>Library</strong>Daily summaries, saved stories and offline reading.</figcaption>
+                </figure>
+                <figure>
+                    <img class="phone-shot" src="/assets/screens/fp2-livery.jpg" width="598" height="1300" alt="Settings with team livery colours and app icon choices" loading="lazy">
+                    <figcaption><strong>Make it yours</strong>Team accent colours, app icons, and light or dark.</figcaption>
+                </figure>
+            </div>
+
+            <h2>What it does</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Pulse</h3>
+                    <p>Racing news from more than a dozen sources in one feed. Stories about your favourite drivers and teams get priority.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Notifications that respect your day</h3>
+                    <p>Live for everything, Summary for a few digests a day, or Hybrid: live by day, quiet overnight. Quiet hours roll overnight news into one morning briefing.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Spoiler Shield</h3>
+                    <p>Watching later? When a session starts the app asks if you are watching live. If not, it holds anything that could spoil the result until you say you're caught up.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Schedule and circuits</h3>
+                    <p>Every session in your timezone, with circuit maps showing sector colouring, corner numbers and DRS zones.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Standings</h3>
+                    <p>Driver and constructor standings, season stats, per-race finishes and a points progression chart.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Apple Watch</h3>
+                    <p>Headlines and the weekend schedule on your wrist, with saved stories syncing both ways.</p>
+                </div>
+            </div>
+
+            <h2>FormulaPulse Pro</h2>
+            <p>Pro unlocks Pit Wall, article summaries, saved and offline reading, full results and circuit detail, the standings chart with custom drivers, the Apple Watch app, and removes ads.</p>
+            <div class="pricing-card">
+                <div class="plan featured">
+                    <p class="plan-name">Monthly</p>
+                    <div class="plan-price">$2.99</div>
+                    <p class="plan-period">per month</p>
+                    <p class="plan-note">Starts with a 7-day free trial</p>
+                </div>
+                <div class="plan">
+                    <p class="plan-name">Yearly</p>
+                    <div class="plan-price">$24.99</div>
+                    <p class="plan-period">per year</p>
+                    <p class="plan-note">About $2.08 a month</p>
+                </div>
+            </div>
+            <p class="fine">US prices; other storefronts may differ. Subscriptions are processed by Apple and renew automatically unless cancelled at least 24 hours before the end of the current period. Manage or cancel in <strong>Settings → [your name] → Subscriptions</strong>.</p>
+
+            <div class="card" style="margin-top:40px;">
+                <h3>Independent</h3>
+                <p>FormulaPulse is an independent app. It is not affiliated with, endorsed by, or associated with Formula 1, the FIA, or any team or driver. All trademarks belong to their respective owners.</p>
+            </div>
+
+            <h2>Legal and support</h2>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Use and Subscription Terms</a></li>
+                <li><a href="support.html">Support and FAQ</a></li>
+            </ul>
+            <p>Support: <a href="mailto:support.formulapulse@carboncode.app">support.formulapulse@carboncode.app</a></p>
         </div>
-    </nav>
-
-    <main class="wrap">
-        <section class="hero">
-            <svg width="36" height="36" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;margin-bottom:16px;">
-                <polygon points="180,100 140,169.28 60,169.28 20,100 60,30.72 140,30.72"
-                    fill="none" stroke="#E83A0A" stroke-width="5" stroke-linejoin="round"/>
-                <line x1="100" y1="100" x2="180" y2="100" stroke="#783218" stroke-width="2"/>
-                <line x1="100" y1="100" x2="140" y2="169.28" stroke="#783218" stroke-width="2"/>
-                <line x1="100" y1="100" x2="60" y2="169.28" stroke="#783218" stroke-width="2"/>
-                <line x1="100" y1="100" x2="20" y2="100" stroke="#783218" stroke-width="2"/>
-                <line x1="100" y1="100" x2="60" y2="30.72" stroke="#783218" stroke-width="2"/>
-                <line x1="100" y1="100" x2="140" y2="30.72" stroke="#783218" stroke-width="2"/>
-                <circle cx="100" cy="100" r="7" fill="#E83A0A"/>
-            </svg>
-            <span class="kicker">F1 Companion · iOS · watchOS</span>
-            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0 16px;">
-                <h1 style="margin:0;">FormulaPulse</h1>
-                <span class="badge-live">Live on App Store</span>
-            </div>
-            <p class="lede">Everything you need for a Formula 1 race weekend — news, schedule, standings, and race replay — in one focused app.</p>
-            <div class="btn-row">
-                <a class="appstore-badge" href="https://apps.apple.com/us/app/formulapulse/id6762660256">
-                    <svg width="20" height="24" viewBox="0 0 24 29" fill="#fff" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.05 20.28c-.98 1.46-1.99 2.93-3.6 2.96-1.59.03-2.1-.95-3.93-.95-1.82 0-2.38.92-3.9.98-1.56.07-2.74-1.58-3.74-3.03C-.16 16.91-.96 11.64 1.04 8.22 2.03 6.54 3.75 5.47 5.6 5.44c1.53-.02 2.97 1.03 3.9 1.03.94 0 2.69-1.27 4.53-1.08.77.03 2.94.31 4.33 2.35-.11.07-2.58 1.51-2.55 4.52.03 3.6 3.15 4.8 3.19 4.81-.04.09-.5 1.72-1.95 3.21zM13.05 3.25c.87-.99 2.3-1.73 3.49-1.78.15 1.39-.41 2.8-1.24 3.8-.82 1.01-2.18 1.8-3.51 1.69-.17-1.37.49-2.79 1.26-3.71z"/>
-                    </svg>
-                    <div class="badge-text">
-                        <small>Download on the</small>
-                        <strong>App Store</strong>
-                    </div>
-                </a>
-                <a class="btn btn-ghost" href="support.html">Support</a>
-                <a class="btn btn-ghost" href="mailto:support.formulapulse@carboncode.app">Contact</a>
-            </div>
-        </section>
-
-        <section class="screens-wrap">
-            <p class="section-label" style="margin-top:0;margin-bottom:20px;">Inside the app</p>
-            <div class="screens-gallery">
-                <div class="screen-item">
-                    <div class="screen-label">Pulse <span class="screen-badge-free">Free</span></div>
-                    <div class="screen-body">
-                        <img src="../assets/screens/fp-pulse.png" alt="Pulse tab showing Breaking and Trending news feed" loading="lazy">
-                        <div class="screen-text">
-                            <div class="screen-desc">15 sources in one interleaved feed. Breaking fires when 3+ outlets publish the same story within minutes. Trending surfaces stories gaining momentum across the paddock. The For You section puts your favorite drivers and teams first.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="screen-item">
-                    <div class="screen-label">Schedule <span class="screen-badge-free">Free</span></div>
-                    <div class="screen-body">
-                        <img src="../assets/screens/fp-schedule.png" alt="Schedule tab with race calendar and Miami GP countdown" loading="lazy">
-                        <div class="screen-text">
-                            <div class="screen-desc">Every race weekend on the calendar with session times in your local timezone. The next race card counts down to lights out. Each round shows both local and track time so you always know when to tune in. Push notifications fire at session start — add an early heads-up 15, 30, 45, or 60 minutes before.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="screen-item">
-                    <div class="screen-label">Standings <span class="screen-badge-free">Free</span></div>
-                    <div class="screen-body">
-                        <img src="../assets/screens/fp-standings.png" alt="Standings tab with points progression chart" loading="lazy">
-                        <div class="screen-text">
-                            <div class="screen-desc">Live championship tables for drivers and constructors. The points progression chart plots cumulative points race by race — switch between top 5 and top 10, each line colored by team. Tap any driver for career stats and teammate comparison.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="screen-item">
-                    <div class="screen-label">Race Detail <span class="screen-badge-free">Free</span></div>
-                    <div class="screen-body">
-                        <img src="../assets/screens/fp-race.png" alt="Miami GP race detail with track outline and weekend schedule" loading="lazy">
-                        <div class="screen-text">
-                            <div class="screen-desc">Full race weekend breakdown with track map, circuit stats, and every session on the schedule. Lap distance, number of turns, DRS zones, and circuit type — all in one place before the cars leave the pit lane.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="screen-item">
-                    <div class="screen-label">Library <span class="screen-badge-pro">Pro</span></div>
-                    <div class="screen-body">
-                        <img src="../assets/screens/fp-library.png" alt="Library tab with saved articles for offline reading" loading="lazy">
-                        <div class="screen-text">
-                            <div class="screen-desc">Save any article to read later, even without a connection. The History tab tracks everything you've read. Offline reading syncs automatically so your saved articles are always there on long travel days.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <p class="section-label">Pro features <span class="pro-label">Subscription</span></p>
-
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h3>Race Replay</h3>
-                <p>Re-live every Grand Prix after the checkered flag. Full telemetry-based replay with position changes, gaps, and the timing board exactly as it happened.</p>
-            </div>
-            <div class="feature-item">
-                <h3>AI Article Summary</h3>
-                <p>One tap and any story is summarized instantly. Get the key points without reading the whole article — useful when you're catching up between sessions.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Full Past Race Details</h3>
-                <p>Complete results and circuit information for every race in the season archive — not just the podium, every classified finisher.</p>
-            </div>
-            <div class="feature-item">
-                <h3>No Ads</h3>
-                <p>Clean reading throughout the app. No native ads in the news feed.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Apple Watch App</h3>
-                <p>F1 news headlines and the session schedule on your wrist. Glanceable and synced with your iPhone.</p>
-            </div>
-        </div>
-
-        <h2>Pro pricing</h2>
-        <div class="pricing-card">
-            <div class="plan featured">
-                <div class="plan-name">Yearly</div>
-                <div class="plan-price">$24.99</div>
-                <div class="plan-period">per year</div>
-                <p class="plan-note">7-day free trial for new subscribers</p>
-            </div>
-            <div class="plan">
-                <div class="plan-name">Monthly</div>
-                <div class="plan-price">$2.99</div>
-                <div class="plan-period">per month</div>
-                <p class="plan-note">No trial. Cancel anytime.</p>
-            </div>
-        </div>
-        <p style="font-size:13px;">Subscriptions are processed by Apple. Manage or cancel anytime in <strong>iOS Settings → [your name] → Subscriptions</strong>.</p>
-
-        <h2>Legal &amp; Support</h2>
-        <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Use &amp; Subscription Terms</a></li>
-            <li><a href="support.html">Support &amp; FAQ</a></li>
-        </ul>
-
-        <h2>Contact</h2>
-        <p>Support: <a href="mailto:support.formulapulse@carboncode.app">support.formulapulse@carboncode.app</a></p>
     </main>
 
-    <footer>
-        <div class="brand-sm">Carbon<span>Code</span></div>
-        <div class="footer-identity">Indie Studio · Veteran Run</div>
-        <div class="footer-links">
-            <a href="/">CarbonCode</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <a href="support.html">Support</a>
-            <a href="mailto:support.formulapulse@carboncode.app">Contact</a>
+<!-- @footer -->
+<footer class="site-footer">
+    <div class="site-footer-inner">
+        <div>
+            <a class="brand" href="/"><svg width="22" height="22" viewBox="0 0 200 200" aria-hidden="true"><polygon points="180,100 140,169.28 60,169.28 20,100 60,30.72 140,30.72" fill="none" stroke="#E83A0A" stroke-width="14" stroke-linejoin="round"/><circle cx="100" cy="100" r="20" fill="#E83A0A"/></svg><span class="brand-word">Carbon<span class="cc">Code</span></span></a>
+            <div class="footer-identity">Indie Studio · Veteran Run</div>
+            <p class="footer-tag">Mobile apps that earn a spot on your home screen.</p>
         </div>
-        <div class="footer-copy">© 2026 CarbonCode</div>
-    </footer>
+        <div>
+            <h2>Apps</h2>
+            <ul>
+                <li><a href="/formulapulse/">FormulaPulse</a></li>
+                <li><a href="/usagepro/">UsagePro for Claude</a></li>
+                <li><a href="/utcal/">UTCal</a></li>
+                <li><a href="/darkroom/">DarkRoom</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Studio</h2>
+            <ul>
+                <li><a href="/websites/">Website rebuilds</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61564563694055">Facebook</a></li>
+                <li><a href="mailto:support@carboncode.app">support@carboncode.app</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-copy">© 2026 CarbonCode. Texas, USA.</div>
+</footer>
+<!-- /@footer -->
 </body>
 </html>

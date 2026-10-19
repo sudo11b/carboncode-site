@@ -9,25 +9,29 @@ Hosted on **Cloudflare Pages**, domain managed through **Namecheap → Cloudflar
 ```
 /
 ├── index.html              # Studio homepage
-├── assets/
-│   └── style.css           # Shared styling
-├── formulapulse/
-│   ├── index.html          # App landing page
-│   ├── privacy.html        # App Store privacy policy
-│   ├── terms.html          # App Store terms of use + subscription terms
-│   └── support.html        # App Store support URL + FAQ
-└── README.md
+├── about.html              # About
+├── 404.html                # Branded 404 (root-absolute paths only)
+├── websites/index.html     # Website rebuild services + L3SA case study
+├── assets/                 # style.css, site.js, fonts, screens/, work/
+├── formulapulse/ utcal/ usagepro/ darkroom/
+│   └── index, privacy, terms, support (.html)
+├── rt-quiz/                # Unlisted
+└── tools/sync-chrome.py    # Shared header/footer helper (see below)
 ```
 
 ## URLs
 
-Once deployed:
-
 - `https://carboncode.app/` — studio homepage
-- `https://carboncode.app/formulapulse/` — FormulaPulse overview
-- `https://carboncode.app/formulapulse/privacy.html` — Privacy Policy
-- `https://carboncode.app/formulapulse/terms.html` — Terms of Use
-- `https://carboncode.app/formulapulse/support.html` — Support
+- `https://carboncode.app/websites/` — website rebuilds
+- `https://carboncode.app/<app>/` — app page, plus `privacy.html`, `terms.html`, `support.html`
+
+## Shared header and footer
+
+Each page holds its own copy of the header, app sub-nav and footer between `<!-- @header -->`, `<!-- @appbar -->` and `<!-- @footer -->` markers. Edit the templates in `tools/sync-chrome.py`, then run:
+
+```sh
+python3 tools/sync-chrome.py
+```
 
 ## Local preview
 
