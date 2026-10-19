@@ -17,7 +17,7 @@ A one-person mobile studio building focused, well-crafted apps for iPhone and Ap
 
 ## Services
 
-- **Website rebuilds** — `/websites/`. Custom rebuilds for small-business sites, with features built to order (scheduling, sign-up, bilingual, admin pages). Case study: **L3SA** (rope access training, Spring TX), before/after screenshots in `assets/work/`. The real L3SA build lives in `~/Built with Claude/l3sa-site` and is hosted in the separate "CarbonCode Clients" Cloudflare account; nothing of it lives in this repo. Contact for projects: support@carboncode.app (subject "Website rebuild").
+- **Website rebuilds** — `/websites/`. Custom rebuilds for small-business sites, with features built to order (scheduling, sign-up, bilingual, admin pages). Case study: **L3SA** (rope access training, Spring TX), before/after screenshots in `assets/work/`. The real L3SA build lives in `~/Built with Claude/l3sa-site` and is hosted in the separate "CarbonCode Clients" Cloudflare account; nothing of it lives in this repo. Contact for projects and general inquiries: **tomas@carboncode.app** (subject "Website rebuild"). Deliberately a personal address: part of the pitch is that clients deal directly with Tomas. App support stays on the per-app addresses.
 - (TheUnsolved was a learning project — do not feature it on marketing surfaces.)
 
 ---
@@ -62,8 +62,13 @@ Built nights and weekends by an Army infantry veteran and NDT
 inspector who codes — every app starts with a real problem worth
 solving and ships only when it earns its place on your home screen.
 
-Current apps: UTCal (NDT calibration, available now) and
-FormulaPulse (F1 companion, coming soon).
+The same approach now goes into website rebuilds for small
+businesses: sites shaped around how the business actually runs,
+with features like class scheduling and online sign-up built to order.
+
+Current apps: FormulaPulse (F1 companion), UsagePro for Claude
+(Claude usage monitor for Mac) and UTCal (NDT calibration), all
+available now, with DarkRoom (gamma radiography toolkit) coming soon.
 ```
 
 **Identity caption (small "established" line on cover photos / footers):**
@@ -255,7 +260,7 @@ These are non-negotiable. Do not put any of the following on the website:
 
 - Tomas's home location (Deer Park, TX) or any city-level address
 - Personal cell phone number
-- Personal email (sudo11b@proton.me) — only `support@carboncode.app` and per-app `support@formulapulse.*` / `support@utcal.*` style addresses
+- Personal email (sudo11b@proton.me) — only `tomas@carboncode.app` (studio and website inquiries), `support@carboncode.app`, and the per-app `support.<app>@carboncode.app` addresses
 - Family member names
 - Specific employer (NDT company name)
 
