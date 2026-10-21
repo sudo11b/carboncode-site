@@ -13,7 +13,7 @@ A one-person mobile studio building focused, well-crafted apps for iPhone and Ap
 - **UTCal** — Calibration tool for UT and PAUT inspectors. Live on the App Store. App Store URL: https://apps.apple.com/us/app/utcal/id6762418371
 - **FormulaPulse** — Formula 1 companion for race weekends. Live on the App Store (id6762660256), version 2.0 since 2026-10-15. 2.0's headline feature is **Pit Wall**, a Pro race assistant that writes its answers with Claude (Anthropic); always disclose that wherever Pit Wall is described. Pro: $2.99/mo with a 7-day trial, $24.99/yr with no trial. Session Replay was retired in 2.0; don't mention it. Screens: `assets/screens/fp2-*.jpg`.
 - **UsagePro for Claude** — macOS menu bar + Dock app showing Claude.ai usage limits. Pages at `/usagepro/` (index, privacy, terms, support). Live on the Mac App Store since 2026-10-10: https://apps.apple.com/us/app/usagepro-for-claude/id6817198315?mt=12 . Free download, 7-day trial, then $2.99 one-time Full Unlock. Support: support.usagepro@carboncode.app. Independent, not affiliated with Anthropic; never imply otherwise.
-- **DarkRoom** — Gamma radiography toolkit (iPhone + Apple Watch). Pages at `/darkroom/`. Coming soon.
+- **DarkRoom RT** — Gamma radiography toolkit (iPhone + Apple Watch) for Ir-192 and Co-60. Pages at `/darkroom/`. Live on the App Store: DARKROOM_APP_STORE_URL . App Store name is "DarkRoom RT"; "DarkRoom" is fine as the short name in body copy and the legal pages. Screens: `assets/screens/dr-*.jpg` (made from the App Store art in `darkroom/screenshots/`). Support: support.darkroom@carboncode.app.
 
 ## Services
 
@@ -67,8 +67,8 @@ businesses: sites shaped around how the business actually runs,
 with features like class scheduling and online sign-up built to order.
 
 Current apps: FormulaPulse (F1 companion), UsagePro for Claude
-(Claude usage monitor for Mac) and UTCal (NDT calibration), all
-available now, with DarkRoom (gamma radiography toolkit) coming soon.
+(Claude usage monitor for Mac), UTCal (NDT calibration) and
+DarkRoom RT (gamma radiography toolkit), all available now.
 ```
 
 **Identity caption (small "established" line on cover photos / footers):**
@@ -296,7 +296,9 @@ Acceptable to mention:
 - Site domain: https://www.carboncode.app
 - Apps:
   - UTCal — https://apps.apple.com/us/app/utcal/id6762418371
-  - FormulaPulse — (App Store URL pending review approval)
+  - FormulaPulse — https://apps.apple.com/us/app/formulapulse/id6762660256
+  - UsagePro for Claude — https://apps.apple.com/us/app/usagepro-for-claude/id6817198315?mt=12
+  - DarkRoom RT — DARKROOM_APP_STORE_URL
 
 ---
 

@@ -28,7 +28,7 @@ APPS = {
     "utcal": "UTCal",
     "formulapulse": "FormulaPulse",
     "usagepro": "UsagePro for Claude",
-    "darkroom": "DarkRoom",
+    "darkroom": "DarkRoom RT",
 }
 
 
@@ -78,7 +78,7 @@ FOOTER = "\n".join([
     '                <li><a href="/formulapulse/">FormulaPulse</a></li>',
     '                <li><a href="/usagepro/">UsagePro for Claude</a></li>',
     '                <li><a href="/utcal/">UTCal</a></li>',
-    '                <li><a href="/darkroom/">DarkRoom</a></li>',
+    '                <li><a href="/darkroom/">DarkRoom RT</a></li>',
     '            </ul>',
     '        </div>',
     '        <div>',

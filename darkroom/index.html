@@ -3,87 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DarkRoom — Gamma Radiography Toolkit for iPhone</title>
-    <meta name="description" content="Shot times, source decay, boundaries and code limits for Ir-192 and Co-60 gamma radiography, on iPhone and Apple Watch.">
+    <title>DarkRoom RT — Gamma Radiography Toolkit for iPhone</title>
+    <meta name="description" content="Shot times, source decay, boundaries and code limits for Ir-192 and Co-60 gamma radiography, on iPhone and Apple Watch. On the App Store.">
     <meta name="theme-color" content="#0A0A0A">
-    <meta property="og:title" content="DarkRoom — CarbonCode">
+    <link rel="canonical" href="https://carboncode.app/darkroom/">
+    <meta property="og:title" content="DarkRoom RT — CarbonCode">
     <meta property="og:description" content="A gamma radiography toolkit for NDT technicians, on iPhone and Apple Watch.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://carboncode.app/darkroom/">
+    <meta property="og:image" content="https://carboncode.app/assets/screens/dr-og.jpg">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="stylesheet" href="/assets/style.css?v=7">
     <style>
-        .section-label {
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--text-muted);
-            margin: 40px 0 12px;
+        .watch-shots {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
         }
-        .feature-item {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 18px 20px;
-            margin: 12px 0;
+        .watch-shot {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 32px;
+            border: 1px solid var(--border-strong);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+            display: block;
+            background: #000;
         }
-        .feature-item h3 {
-            font-size: 15px;
-            margin: 0 0 6px;
+        @media (max-width: 420px) {
+            .watch-shot { max-width: 40vw; border-radius: 24px; }
         }
-        .feature-item p {
-            font-size: 14px;
-            margin: 0 0 10px;
-            line-height: 1.5;
-        }
-        .feature-item p:last-child { margin-bottom: 0; }
-        .pricing-card {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 16px 0;
-        }
-        @media (max-width: 480px) {
-            .pricing-card { grid-template-columns: 1fr; }
-        }
-        .plan {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 20px;
-        }
-        .plan.featured {
-            border-color: var(--orange-border);
-            background: var(--orange-dim);
-        }
-        .plan-name {
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            margin: 0 0 8px;
-        }
-        .plan.featured .plan-name { color: var(--orange-bright); }
-        .plan-price {
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--text);
-            letter-spacing: -0.5px;
-            line-height: 1;
-        }
-        .plan-period {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin: 4px 0 10px;
-        }
-        .plan-note {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin: 0;
-        }
-        .plan.featured .plan-note { color: var(--orange-bright); }
     </style>
 </head>
 <body>
@@ -102,79 +50,119 @@
 </header>
 <!-- /@header -->
 <!-- @appbar darkroom -->
-<nav class="app-bar" aria-label="DarkRoom">
-    <a class="app-bar-name" href="/darkroom/" aria-current="page">DarkRoom</a>
+<nav class="app-bar" aria-label="DarkRoom RT">
+    <a class="app-bar-name" href="/darkroom/" aria-current="page">DarkRoom RT</a>
     <a href="/darkroom/privacy.html">Privacy</a>
     <a href="/darkroom/terms.html">Terms</a>
     <a href="/darkroom/support.html">Support</a>
 </nav>
 <!-- /@appbar -->
 
-    <main id="main" class="wrap">
-        <section class="hero">
-            <svg width="36" height="36" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;margin-bottom:16px;">
-                <polygon points="180,100 140,169.28 60,169.28 20,100 60,30.72 140,30.72"
-                    fill="none" stroke="#E83A0A" stroke-width="5" stroke-linejoin="round"/>
-                <line x1="100" y1="100" x2="180" y2="100" stroke="#783218" stroke-width="2"/>
-                <line x1="100" y1="100" x2="140" y2="169.28" stroke="#783218" stroke-width="2"/>
-                <line x1="100" y1="100" x2="60" y2="169.28" stroke="#783218" stroke-width="2"/>
-                <line x1="100" y1="100" x2="20" y2="100" stroke="#783218" stroke-width="2"/>
-                <line x1="100" y1="100" x2="60" y2="30.72" stroke="#783218" stroke-width="2"/>
-                <line x1="100" y1="100" x2="140" y2="30.72" stroke="#783218" stroke-width="2"/>
-                <circle cx="100" cy="100" r="7" fill="#E83A0A"/>
-            </svg>
-            <span class="kicker">Gamma RT · iPhone + Apple Watch</span>
-            <div style="display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:12px 0 16px;">
-                <h1 style="margin:0;">DarkRoom</h1>
-                <span class="badge-soon">Coming soon</span>
+    <main id="main">
+        <div class="wrap">
+            <section class="hero">
+                <div class="app-meta">
+                    <span class="badge-new">New</span>
+                    <span class="badge-live">On the App Store</span>
+                </div>
+                <h1>DarkRoom RT</h1>
+                <p class="lede">A gamma radiography toolkit for the field. Shot times, source decay, boundaries and code limits for Ir-192 and Co-60, built by an NDT tech who started out in RT.</p>
+                <div class="btn-row">
+                    <a class="appstore-badge" href="DARKROOM_APP_STORE_URL">
+                        <svg width="20" height="24" viewBox="0 0 24 29" fill="#fff" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.05 20.28c-.98 1.46-1.99 2.93-3.6 2.96-1.59.03-2.1-.95-3.93-.95-1.82 0-2.38.92-3.9.98-1.56.07-2.74-1.58-3.74-3.03C-.16 16.91-.96 11.64 1.04 8.22 2.03 6.54 3.75 5.47 5.6 5.44c1.53-.02 2.97 1.03 3.9 1.03.94 0 2.69-1.27 4.53-1.08.77.03 2.94.31 4.33 2.35-.11.07-2.58 1.51-2.55 4.52.03 3.6 3.15 4.8 3.19 4.81-.04.09-.5 1.72-1.95 3.21zM13.05 3.25c.87-.99 2.3-1.73 3.49-1.78.15 1.39-.41 2.8-1.24 3.8-.82 1.01-2.18 1.8-3.51 1.69-.17-1.37.49-2.79 1.26-3.71z"/>
+                        </svg>
+                        <span class="badge-text">
+                            <small>Download on the</small>
+                            <strong>App Store</strong>
+                        </span>
+                    </a>
+                    <a class="btn btn-ghost" href="support.html">Support</a>
+                </div>
+                <p class="fine" style="margin-top:14px;">iPhone and Apple Watch. Iridium-192 and Cobalt-60 gamma sources; X-ray tubes are not covered.</p>
+            </section>
+
+            <figure class="reticle" style="margin:32px 0 0;">
+                <img class="mac-shot" src="/assets/screens/dr-header.jpg" width="1600" height="686" alt="DarkRoom RT on three iPhones: the pipe chart, the exposure calculator with a 14-second shot time and boundary distances, and the day's saved shots">
+            </figure>
+
+            <h2>Inside the app</h2>
+            <div class="screens" tabindex="0" aria-label="DarkRoom RT screenshots, scrolls sideways">
+                <figure>
+                    <img class="phone-shot" src="/assets/screens/dr-exposure.jpg" width="598" height="1300" alt="Exposure calculator showing a 0:14 shot time and boundary distances for 2, 5 and 100 mR/hr" loading="lazy">
+                    <figcaption><strong>Exposure</strong>Shot time from activity, thickness, SFD and your R factor, with boundary distances right underneath.</figcaption>
+                </figure>
+                <figure>
+                    <img class="phone-shot" src="/assets/screens/dr-shot-timer.jpg" width="598" height="1300" alt="A running shot timer with a Stop button above the exposure inputs, and today's saved shots" loading="lazy">
+                    <figcaption><strong>Shot timer</strong>Start the countdown from the result and save the shot to today's list.</figcaption>
+                </figure>
+                <figure>
+                    <img class="phone-shot" src="/assets/screens/dr-pipe-chart.jpg" width="598" height="1300" alt="Pipe chart with 6 inch schedule STD/40 selected, showing diameters, wall thickness, belt spacing and weight" loading="lazy">
+                    <figcaption><strong>Pipe chart</strong>Pick the size and schedule for OD, ID, wall, belt spacing and weight, then send it to the shot calculator.</figcaption>
+                </figure>
+                <figure>
+                    <img class="phone-shot" src="/assets/screens/dr-codes.jpg" width="598" height="1300" alt="API 1104 limits for inadequate penetration and incomplete fusion, worked out for the pipe entered" loading="lazy">
+                    <figcaption><strong>Codes</strong>Acceptance limits worked out for your pipe, with the clause they come from.</figcaption>
+                </figure>
+                <figure>
+                    <img class="phone-shot" src="/assets/screens/dr-aws-d1-1.jpg" width="598" height="1300" alt="AWS D1.1 limits for a 0.75 inch weld, with a Check an Indication button" loading="lazy">
+                    <figcaption><strong>AWS D1.1</strong>Limits for the weld size you enter, and a way to check an indication against them.</figcaption>
+                </figure>
+                <figure>
+                    <img class="phone-shot" src="/assets/screens/dr-toolkit.jpg" width="598" height="1300" alt="The full list of DarkRoom RT tools, from exposure and shot timer to IQI selection and four welding codes" loading="lazy">
+                    <figcaption><strong>The whole kit</strong>Calculators, pipe chart, codes and field tools in four tabs.</figcaption>
+                </figure>
             </div>
-            <p class="lede">Shot times, source decay, boundaries and code limits for Ir-192 and Co-60 radiography, built by an NDT tech for the field.</p>
-            <p>An iPhone and Apple Watch app by CarbonCode.</p>
-            <div class="btn-row">
-                <a class="btn btn-primary" href="support.html">Support</a>
-                <a class="btn btn-ghost" href="mailto:support.darkroom@carboncode.app">Contact</a>
+
+            <h2>What it does</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Exposure</h3>
+                    <p>Shot time from source activity, steel-equivalent thickness, source-to-film distance and your crew's R factor, with the source decayed to today. The common slide-rule field formula means the R your crew already uses carries over. Learn R corrects it from a shot you trust.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Shot timer</h3>
+                    <p>Start the countdown straight from the result. DarkRoom asks to alert you when the shot ends, so you hear it with the phone locked. Saved shots go on today's list, which clears each day.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Calculators</h3>
+                    <p>Geometric unsharpness, minimum source-to-film distance, inverse square law, belt spacing, equivalent thickness, exclusion zone and IQI selection, plus a pipe chart.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Codes</h3>
+                    <p>Plain-language acceptance limits for API 1104, ASME B31.3, ASME Section V and AWS D1.1, worked out for the wall or weld size you enter.</p>
+                </div>
             </div>
-        </section>
 
-        <p class="section-label">What it does</p>
+            <section class="app-feature" style="padding-top:48px;" aria-labelledby="watch-title">
+                <div class="app-feature-text">
+                    <span class="kicker">Apple Watch</span>
+                    <h2 id="watch-title" class="h-display" style="margin-top:0;">The shot on your wrist</h2>
+                    <p>The countdown runs on your watch, with a tap when the shot ends. Stop it from either device. Today's saved shots are there too, so you can see what you shot without pulling out the phone.</p>
+                </div>
+                <div class="app-feature-media watch-shots">
+                    <img class="watch-shot" src="/assets/screens/dr-watch-countdown.jpg" width="422" height="514" alt="Apple Watch counting down a shot named Header tie-in, 21 seconds left, with a Stop button" loading="lazy">
+                    <img class="watch-shot" src="/assets/screens/dr-watch-saved-shots.jpg" width="422" height="514" alt="Apple Watch list of today's shots with their times" loading="lazy">
+                </div>
+            </section>
 
-        <div class="feature-item">
-            <h3>Exposure</h3>
-            <p>Shot time from source activity, steel-equivalent thickness, source-to-film distance and your crew's R factor, with the source decayed to today. The common slide-rule field formula means the R your crew already uses carries over. Learn R corrects it from a shot you trust.</p>
+            <h2>Your data</h2>
+            <p>There is no account, no analytics and no CarbonCode server. Everything runs on your iPhone, with or without a signal. Your R factors, Γ values and boundary rates sync between your own devices through iCloud. The details are in the <a href="privacy.html">Privacy Policy</a>.</p>
+
+            <div class="card" style="margin-top:40px;">
+                <h3>A calculation aid, not a procedure</h3>
+                <p>DarkRoom does not replace your training, your written procedure or a qualified Level II or Level III. Check results against a known shot, and confirm every boundary with a calibrated survey meter.</p>
+                <p>API 1104, ASME B31.3, ASME Section V and AWS D1.1 are published by the American Petroleum Institute, ASME and the American Welding Society. DarkRoom is not affiliated with or endorsed by them, and it does not reproduce their standards.</p>
+            </div>
+
+            <h2>Legal and support</h2>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Use</a></li>
+                <li><a href="support.html">Support and FAQ</a></li>
+            </ul>
+            <p>Support: <a href="mailto:support.darkroom@carboncode.app">support.darkroom@carboncode.app</a></p>
         </div>
-
-        <div class="feature-item">
-            <h3>Calculators</h3>
-            <p>Geometric unsharpness, minimum source-to-film distance, inverse square law, belt spacing, equivalent thickness, exclusion zone and IQI selection, plus a pipe chart.</p>
-        </div>
-
-        <div class="feature-item">
-            <h3>Codes</h3>
-            <p>Plain-language acceptance limits for API 1104, ASME B31.3, ASME Section V and AWS D1.1, worked out for the wall or weld size you enter.</p>
-        </div>
-
-        <div class="feature-item">
-            <h3>Apple Watch</h3>
-            <p>The shot countdown on your wrist, with a tap when the shot ends. Stop it from either device.</p>
-        </div>
-
-        <h2>Your data</h2>
-        <p>There is no account, no analytics and no CarbonCode server. Everything runs on your iPhone. Your R factors, Γ values and boundary rates sync between your own devices through iCloud. The details are in the <a href="privacy.html">Privacy Policy</a>.</p>
-
-        <div class="card">
-            <h3>A calculation aid, not a procedure</h3>
-            <p>DarkRoom does not replace your training, your written procedure or a qualified Level II or Level III. Check results against a known shot, and confirm every boundary with a calibrated survey meter.</p>
-        </div>
-
-        <h2>Legal &amp; Support</h2>
-        <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Use</a></li>
-            <li><a href="support.html">Support &amp; FAQ</a></li>
-        </ul>
-
-        <h2>Contact</h2>
-        <p>Support: <a href="mailto:support.darkroom@carboncode.app">support.darkroom@carboncode.app</a></p>
     </main>
 
 <!-- @footer -->
@@ -191,7 +179,7 @@
                 <li><a href="/formulapulse/">FormulaPulse</a></li>
                 <li><a href="/usagepro/">UsagePro for Claude</a></li>
                 <li><a href="/utcal/">UTCal</a></li>
-                <li><a href="/darkroom/">DarkRoom</a></li>
+                <li><a href="/darkroom/">DarkRoom RT</a></li>
             </ul>
         </div>
         <div>
