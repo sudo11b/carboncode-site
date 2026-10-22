@@ -5,3 +5,6 @@
 # Claude memory notes — these belong in the Obsidian vault, not the site repo
 /projects/
 /wrap-ups/
+
+# Local Pages Functions state (wrangler pages dev)
+.wrangler/

@@ -10,6 +10,24 @@
         "8080"
       ],
       "port": 8080
+    },
+    {
+      "name": "carboncode-site + functions",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "--yes",
+        "wrangler@4.151.1",
+        "pages",
+        "dev",
+        ".",
+        "--port",
+        "8788",
+        "--compatibility-date",
+        "2026-10-01",
+        "--binding",
+        "EMAIL_MODE=log"
+      ],
+      "port": 8788
     }
   ]
 }

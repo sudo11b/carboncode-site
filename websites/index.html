@@ -14,8 +14,8 @@
     <meta property="og:image" content="https://carboncode.app/assets/work/l3sa-after.jpg">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="preload" href="/assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/assets/style.css?v=7">
-    <script src="/assets/site.js?v=7" defer></script>
+    <link rel="stylesheet" href="/assets/style.css?v=8">
+    <script src="/assets/site.js?v=8" defer></script>
 </head>
 <body>
 <!-- @header current=websites -->
@@ -165,23 +165,108 @@
 
             <section class="section" aria-labelledby="steps-title">
                 <div class="section-head">
-                    <h2 id="steps-title" class="h-display">How a rebuild goes</h2>
+                    <h2 id="steps-title" class="h-display">How it works</h2>
+                    <p>It goes the same way whether you're replacing a site or starting with nothing. With no site yet, the build starts from the ground up: a domain, a design shaped around the business, and the features you need from day one.</p>
                 </div>
-                <ol class="steps">
-                    <li><strong>Talk it through</strong>You explain what the site needs to do. I look at what you have now and what isn't working.</li>
-                    <li><strong>Private preview</strong>You get a link to click through on your own phone and send feedback before anything goes live.</li>
-                    <li><strong>Switch over</strong>Your domain moves to the new site. Email keeps working through the move.</li>
+                <ol class="steps steps-5">
+                    <li><strong>Talk it through</strong>You explain what the site needs to do. If you have a site, I go through it first to see what's working and what isn't.</li>
+                    <li><strong>Domain and plan</strong>Have a domain? It stays yours, right where it is. Need one? I help you pick a name and get it registered for the business.</li>
+                    <li><strong>Private preview</strong>The site takes shape on a private link you click through on your own phone. You send feedback before anything goes live.</li>
+                    <li><strong>Go live</strong>The new site goes up on your domain. If you're moving off an old site, email keeps working through the switch.</li>
                     <li><strong>Keep it current</strong>Changes, fixes and new features on request, for as long as you need them.</li>
                 </ol>
                 <p class="fine" style="margin-top:28px;max-width:640px;">Every project is quoted up front after the first conversation, based on what the site needs to do.</p>
             </section>
 
-            <section class="cta-band" id="contact" aria-labelledby="contact-title">
-                <div>
-                    <h2 id="contact-title">Have a site that isn't pulling its weight?</h2>
-                    <p>Send the link and a few lines about your business to <a href="mailto:tomas@carboncode.app?subject=Website%20rebuild">tomas@carboncode.app</a>. It comes straight to me, the person who would build it.</p>
+            <section class="quote" id="contact" aria-labelledby="contact-title">
+                <div class="quote-intro">
+                    <h2 id="contact-title" class="h-display">Get a quote</h2>
+                    <p>A few questions, about two minutes. It goes straight to me, the person who would build it.</p>
+                    <p>If you already have a site, I look it over before I reply, so the first conversation starts with specifics instead of a sales pitch.</p>
+                    <p class="fine">Rather write it yourself? Email <a href="mailto:tomas@carboncode.app?subject=Website%20rebuild">tomas@carboncode.app</a>.</p>
                 </div>
-                <a class="btn btn-primary" href="mailto:tomas@carboncode.app?subject=Website%20rebuild">Email Tomas</a>
+
+                <div class="quote-panel">
+                    <p class="q-notice" id="quote-sent" tabindex="-1"><strong>Request sent.</strong> It's in my inbox, and I'll reply to the email you gave.</p>
+                    <p class="q-notice" id="quote-error" tabindex="-1"><strong>That didn't go through.</strong> Please email <a href="mailto:tomas@carboncode.app?subject=Website%20rebuild">tomas@carboncode.app</a> instead.</p>
+
+                    <form class="quote-form" id="quote-form" action="/api/quote" method="post" novalidate>
+                        <fieldset class="q-step">
+                            <legend><span class="q-num">01</span> Do you have a domain (website)?</legend>
+                            <div class="choices choices-2" id="q-domain-status">
+                                <label class="choice"><input type="radio" name="domain_status" value="have" required><span><strong>Yes, I have one</strong><small>With or without a site on it</small></span></label>
+                                <label class="choice"><input type="radio" name="domain_status" value="need"><span><strong>No, I need one</strong><small>I'll help pick and register it</small></span></label>
+                            </div>
+                            <p class="q-error" data-error-for="domain_status"></p>
+                            <div class="field" data-show-when="domain_status=have">
+                                <label for="q-domain">Your domain or current site</label>
+                                <input class="q-input" id="q-domain" name="domain" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="yourbusiness.com" maxlength="200" aria-describedby="q-domain-hint">
+                                <p class="q-hint" id="q-domain-hint">I'll look over what's there before we talk.</p>
+                                <p class="q-error" data-error-for="domain"></p>
+                            </div>
+                            <div class="field" data-show-when="domain_status=need">
+                                <label for="q-domain-ideas">Any names in mind? <span class="opt">Optional</span></label>
+                                <input class="q-input" id="q-domain-ideas" name="domain_ideas" type="text" autocapitalize="off" spellcheck="false" placeholder="yourbusiness.com" maxlength="300">
+                            </div>                        </fieldset>
+
+                        <fieldset class="q-step">
+                            <legend><span class="q-num">02</span> What do you need?</legend>
+                            <div class="choices" id="q-project-type">
+                                <label class="choice"><input type="radio" name="project_type" value="new" required><span><strong>New build</strong><small>From the ground up. No site yet, or starting over.</small></span></label>
+                                <label class="choice"><input type="radio" name="project_type" value="refresh"><span><strong>Site refresh</strong><small>New design and faster pages. Your content carries over.</small></span></label>
+                                <label class="choice"><input type="radio" name="project_type" value="feature"><span><strong>Feature request</strong><small>Add something to the site you have, like booking or sign-up.</small></span></label>
+                            </div>
+                            <p class="q-error" data-error-for="project_type"></p>
+                            <div class="field">
+                                <label for="q-details">Tell me about the business and what the site should do</label>
+                                <textarea class="q-input" id="q-details" name="details" rows="5" maxlength="5000" required placeholder="We run weekend CPR classes. People should be able to see the dates and sign up from their phone."></textarea>
+                                <p class="q-error" data-error-for="details"></p>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="q-step">
+                            <legend><span class="q-num">03</span> How do I reach you?</legend>
+                            <div class="field-row">
+                                <div class="field">
+                                    <label for="q-name">Your name</label>
+                                    <input class="q-input" id="q-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+                                    <p class="q-error" data-error-for="name"></p>
+                                </div>
+                                <div class="field">
+                                    <label for="q-business">Business name <span class="opt">Optional</span></label>
+                                    <input class="q-input" id="q-business" name="business" type="text" autocomplete="organization" maxlength="160">
+                                </div>
+                                <div class="field">
+                                    <label for="q-email">Email</label>
+                                    <input class="q-input" id="q-email" name="email" type="email" autocomplete="email" autocapitalize="off" spellcheck="false" maxlength="200" required>
+                                    <p class="q-error" data-error-for="email"></p>
+                                </div>
+                                <div class="field">
+                                    <label for="q-phone">Phone <span class="opt">Optional</span></label>
+                                    <input class="q-input" id="q-phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="q-trap" aria-hidden="true">
+                            <label for="q-website">Leave this empty</label>
+                            <input id="q-website" name="company_website" type="text" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <p class="q-alert" role="alert" hidden></p>
+
+                        <div class="q-submit">
+                            <button class="btn btn-primary" type="submit">Send request</button>
+                            <p class="fine">Goes to tomas@carboncode.app. Your details are only used to reply to you.</p>
+                        </div>
+                    </form>
+
+                    <div class="q-done" hidden>
+                        <h3 tabindex="-1">Got it. Your request is in my inbox.</h3>
+                        <p>I'll reply to <strong data-done-email></strong>, usually with a few questions or a time to talk.</p>
+                        <p class="fine">Left something out? Email <a href="mailto:tomas@carboncode.app?subject=Website%20rebuild">tomas@carboncode.app</a>.</p>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
